@@ -1,9 +1,27 @@
-[gd_scene load_steps=2 format=3 uid="uid://bddroqhpvhfxl"]
+[gd_scene load_steps=6 format=3 uid="uid://bddroqhpvhfxl"]
 
-[sub_resource type="BoxMesh" id="BoxMesh_71tfy"]
+[ext_resource type="PackedScene" uid="uid://ctjx0tjkd2gw7" path="res://Player.tscn" id="1_rj1ah"]
+[ext_resource type="Texture2D" uid="uid://cfom3atmct66r" path="res://Textures/Walls/Fabric042.png" id="1_x1cij"]
+[ext_resource type="Script" path="res://Apartment_floor.gd" id="2_tavui"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_boy87"]
+albedo_texture = ExtResource("1_x1cij")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3ha1a"]
+albedo_texture = ExtResource("1_x1cij")
 
 [node name="Node3d" type="Node3D"]
 
-[node name="MeshInstance3d" type="MeshInstance3D" parent="."]
-transform = Transform3D(6.554, 0, 0, 0, 0.05, 0, 0, 0, 6.545, 0, 0, 0)
-mesh = SubResource("BoxMesh_71tfy")
+[node name="SpotLight3d" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.00432839, 0.999991, 0, -0.999991, 0.00432839, 0, 3.07298, -0.0181782)
+spot_range = 4.51805
+
+[node name="CsgBox3d" type="CSGBox3D" parent="."]
+transform = Transform3D(6.554, 0, 0, 0, 0.05, 0, 0, 0, 6.545, 0, -0.0139424, 0)
+material_override = SubResource("StandardMaterial3D_boy87")
+use_collision = true
+material = SubResource("StandardMaterial3D_3ha1a")
+script = ExtResource("2_tavui")
+
+[node name="Node3d2" parent="." instance=ExtResource("1_rj1ah")]
+transform = Transform3D(20, 0, 0, 0, 20.765, 0, 0, 0, 22.926, -0.958715, 0.416847, 1.18127)

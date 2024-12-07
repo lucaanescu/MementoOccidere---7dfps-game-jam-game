@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://ctjx0tjkd2gw7"]
+
+[ext_resource type="Script" path="res://Scripts/Player_controler.gd" id="1_temn3"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_phyot"]
+radius = 0.00743348
+height = 0.014867
+
+[node name="Node3d" type="CharacterBody3D"]
+transform = Transform3D(20, 0, 0, 0, 20.765, 0, 0, 0, 22.926, 0, 0, 0)
+script = ExtResource("1_temn3")
+
+[node name="CollisionShape3d" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 2.42708, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("CapsuleShape3D_phyot")
+
+[node name="Node3d" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 2.42708, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="Camera3d" type="Camera3D" parent="Node3d"]
+transform = Transform3D(0.0159284, 0, 0, 0, 0.00632126, 0, 0, 0, 0.0138956, 0, 0.004, 0)
