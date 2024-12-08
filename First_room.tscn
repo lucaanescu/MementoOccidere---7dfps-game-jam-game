@@ -27,4 +27,4 @@ material = SubResource("StandardMaterial3D_3ha1a")
 script = ExtResource("2_tavui")
 
 [node name="Node3d" parent="." instance=ExtResource("1_rj1ah")]
-transform = Transform3D(50, 0, 0, 0, 51.913, 0, 0, 0, 57.315, 1.75164, 0.995873, 4.13185)
+transform = Transform3D(50, 0, 0, 0, 51.913, 0, 0, 0, 57.315, 0.698783, 0.990789, 6.38126)

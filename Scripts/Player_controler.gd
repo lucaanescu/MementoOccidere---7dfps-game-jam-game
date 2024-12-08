@@ -4,8 +4,8 @@ extends CharacterBody3D
 var camera : Camera3D
 
 #Base values of the game that will change around
-var SPEED = 5
-var Sprinting = 10
+var SPEED = 4
+var Sprinting = 7
 const JUMP_VELOCITY = 4.5
 const mouse_sense = 0.1
 
@@ -40,7 +40,7 @@ func _physics_process(delta):
 	if Input.is_action_pressed("Sprint"):
 		SPEED = Sprinting
 	else:
-		SPEED = 2.0
+		SPEED = 4
 
 	# Get the input direction and handle the movement/deceleration.
 	var input_dir = Input.get_vector("Left", "Right", "Forward", "Backward")
