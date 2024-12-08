@@ -13,15 +13,18 @@ albedo_texture = ExtResource("1_x1cij")
 [node name="Node3d" type="Node3D"]
 
 [node name="SpotLight3d" type="SpotLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.00432839, 0.999991, 0, -0.999991, 0.00432839, 0, 3.07298, -0.0181782)
-spot_range = 4.51805
+transform = Transform3D(1, 0, 0, 0, 0.00432839, 0.999991, 0, -0.999991, 0.00432839, 0, 13.3832, -0.0181782)
+light_color = Color(1, 1, 0.952941, 1)
+light_energy = 3.667
+spot_range = 22.306
 
 [node name="CsgBox3d" type="CSGBox3D" parent="."]
 transform = Transform3D(6.554, 0, 0, 0, 0.05, 0, 0, 0, 6.545, 0, -0.0139424, 0)
 material_override = SubResource("StandardMaterial3D_boy87")
 use_collision = true
+size = Vector3(5, 1, 5)
 material = SubResource("StandardMaterial3D_3ha1a")
 script = ExtResource("2_tavui")
 
-[node name="Node3d2" parent="." instance=ExtResource("1_rj1ah")]
-transform = Transform3D(20, 0, 0, 0, 20.765, 0, 0, 0, 22.926, -0.958715, 0.416847, 1.18127)
+[node name="Node3d" parent="." instance=ExtResource("1_rj1ah")]
+transform = Transform3D(50, 0, 0, 0, 51.913, 0, 0, 0, 57.315, 1.75164, 0.995873, 4.13185)
