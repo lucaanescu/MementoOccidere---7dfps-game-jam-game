@@ -18,13 +18,14 @@ func _ready():
 
 func _input(event):
 	if event is InputEventMouseMotion:
-# Actually selecting the variable for the camera in the tree while the game runs
+		# Actually selecting the variable for the camera in the tree while the game runs
 		camera = get_node("Head/Camera3d")
 		rotate_y(deg_to_rad(event.relative.x * -mouse_sense))
 		camera.rotate_x(deg_to_rad(event.relative.y * -mouse_sense))
-		camera.rotation.x = clamp(camera.rotation.x,deg_to_rad(-89),deg_to_rad(89))
-# Ok degree to radians is actually way better for clamping the rotation than actual clamp comands, that or maybe I just didnt clamp hard enough
+		camera.rotation.x = clamp(camera.rotation.x,deg_to_rad(-79),deg_to_rad(79))
+		# Ok degree to radians is actually good
 
+#Trying to add controler input from the second stick but its not really working out
 func _input2(event):
 	if event is InputEventJoypadMotion:
 		camera = get_node("Head/Camera3d")
