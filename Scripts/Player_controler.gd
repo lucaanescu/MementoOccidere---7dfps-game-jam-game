@@ -8,6 +8,8 @@ var SPEED = 4
 var Sprinting = 7
 const JUMP_VELOCITY = 4.5
 const mouse_sense = 0.1
+const mouse_sense_pad = 5
+var mouse_dead = 0.1
 
 # declaring a variable for if the player is using a controler and a vector2
 var look_delta : Vector2
@@ -16,18 +18,12 @@ var look_delta : Vector2
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
 #locks the mouse in the center and makes it invisible (makes it an issue if there's a controler)
-#func _ready():
-	#Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+func _ready():
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	#just remember to wake this line up when you're done testing
 
 func _input(event):
 	_camera = get_node("Head/Camera3d")
-	
-	if event is InputEventJoypadMotion:
-		print("I'm reading this")
-		rotate_y(deg_to_rad(event.x * -mouse_sense))
-		_camera.rotate_x(deg_to_rad(event.y * -mouse_sense))
-		_camera.rotation.x = clamp(_camera.rotation.x,deg_to_rad(-79),deg_to_rad(79))
 	
 	if event is InputEventMouseMotion:
 		# Actually selecting the variable for the camera in the tree while the game runs
@@ -37,6 +33,18 @@ func _input(event):
 		# Ok degree to radians is actually good
 
 func _physics_process(delta):
+	
+	_camera = get_node("Head/Camera3d")
+	print(Input.get_joy_axis(1, JOY_AXIS_RIGHT_Y))
+		
+	var y = Input.get_joy_axis(1, JOY_AXIS_RIGHT_X)
+	var x = Input.get_joy_axis(1, JOY_AXIS_RIGHT_Y)
+		
+	if abs(y) > mouse_dead:
+		rotate_y(deg_to_rad(y * -mouse_sense_pad))
+	if abs(x) > mouse_dead:
+		_camera.rotate_x(deg_to_rad(x * -mouse_sense_pad))
+		_camera.rotation.x = clamp(_camera.rotation.x,deg_to_rad(-79),deg_to_rad(79))
 	
 	# Add the gravity.
 	if not is_on_floor():
