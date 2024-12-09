@@ -34,6 +34,7 @@ func _input(event):
 
 func _physics_process(delta):
 	
+	# camera controls for the pad, they work mostly but are still kind of janky for some reason with the new pad
 	_camera = get_node("Head/Camera3d")
 	print(Input.get_joy_axis(1, JOY_AXIS_RIGHT_Y))
 		
