@@ -1,38 +1,31 @@
-[gd_scene load_steps=16 format=3 uid="uid://bddroqhpvhfxl"]
+[gd_scene load_steps=12 format=3 uid="uid://bddroqhpvhfxl"]
 
 [ext_resource type="Texture2D" uid="uid://cqoff88vqusb2" path="res://Textures/Floor/WoodFloor048_1K-JPG_Color.jpg" id="1_hy7i1"]
 [ext_resource type="PackedScene" uid="uid://ctjx0tjkd2gw7" path="res://Player.tscn" id="1_rj1ah"]
 [ext_resource type="Texture2D" uid="uid://cfom3atmct66r" path="res://Textures/Walls/Fabric042.png" id="1_x1cij"]
-[ext_resource type="Texture2D" uid="uid://mqnvmmmp7wys" path="res://Textures/Floor/WoodFloor048_1K-JPG_NormalGL.jpg" id="2_6s0im"]
+[ext_resource type="Texture2D" uid="uid://d33cmng0kg137" path="res://Textures/Floor/WoodFloor048_1K-JPG_NormalDX.jpg" id="2_a31ra"]
 [ext_resource type="Script" path="res://Apartment_floor.gd" id="2_tavui"]
-[ext_resource type="Texture2D" uid="uid://c1xy01dayd0cl" path="res://Textures/Floor/WoodFloor048_1K-JPG_Displacement.jpg" id="3_f7n5j"]
 [ext_resource type="Texture2D" uid="uid://c1t222peninp7" path="res://Textures/Ceiling/Plastic006_1K-JPG_Color.jpg" id="7_l88tn"]
-[ext_resource type="Texture2D" uid="uid://b45d5gp2pqmxe" path="res://Textures/Ceiling/Plastic006_1K-JPG_NormalDX.jpg" id="8_2pkb3"]
-[ext_resource type="Texture2D" uid="uid://x2r55hiudupp" path="res://Textures/Ceiling/Plastic006_1K-JPG_Displacement.jpg" id="9_akfv7"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oakf7"]
 albedo_texture = ExtResource("1_hy7i1")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r0v3o"]
 albedo_texture = ExtResource("1_hy7i1")
-roughness_texture = ExtResource("3_f7n5j")
-normal_enabled = true
-normal_texture = ExtResource("2_6s0im")
+roughness_texture = ExtResource("2_a31ra")
+uv1_scale = Vector3(60, 60, 60)
+uv2_scale = Vector3(19.86, 19.86, 19.86)
+use_point_size = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gktkl"]
 albedo_texture = ExtResource("1_x1cij")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bd5vo"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v4hxp"]
-next_pass = SubResource("StandardMaterial3D_bd5vo")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5sbqa"]
 albedo_texture = ExtResource("7_l88tn")
-roughness_texture = ExtResource("9_akfv7")
-normal_enabled = true
-normal_texture = ExtResource("8_2pkb3")
+uv1_scale = Vector3(60, 60, 60)
 
 [sub_resource type="QuadMesh" id="QuadMesh_js4hu"]
-material = SubResource("StandardMaterial3D_v4hxp")
+material = SubResource("StandardMaterial3D_5sbqa")
 size = Vector2(30, 30)
 
 [node name="Node3d" type="Node3D"]
@@ -51,10 +44,10 @@ size = Vector3(5, 1, 5)
 material = SubResource("StandardMaterial3D_r0v3o")
 script = ExtResource("2_tavui")
 
-[node name="Node3d" parent="." instance=ExtResource("1_rj1ah")]
-transform = Transform3D(50, 0, 0, 0, 51.913, 0, 0, 0, 57.315, 0.698783, 0.990789, 6.38126)
-
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -0.0139447, -0.999903, 0, 0.999903, -0.0139447, 0, 8.4525, 0)
 material_override = SubResource("StandardMaterial3D_gktkl")
 mesh = SubResource("QuadMesh_js4hu")
+
+[node name="Node3d" parent="." instance=ExtResource("1_rj1ah")]
+transform = Transform3D(50, 0, 0, 0, 51.913, 0, 0, 0, 57.315, 3.26027, 0.978726, 1.18796)

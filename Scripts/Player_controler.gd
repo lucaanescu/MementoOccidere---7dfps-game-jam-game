@@ -9,7 +9,7 @@ var Sprinting = 7
 const JUMP_VELOCITY = 4.5
 const mouse_sense = 0.1
 const mouse_sense_pad = 5
-var mouse_dead = 0.1
+var mouse_dead = 0.3
 
 # declaring a variable for if the player is using a controler and a vector2
 var look_delta : Vector2
@@ -18,8 +18,8 @@ var look_delta : Vector2
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
 #locks the mouse in the center and makes it invisible (makes it an issue if there's a controler)
-func _ready():
-	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+#func _ready():
+	#Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	#just remember to wake this line up when you're done testing
 
 func _input(event):
@@ -36,10 +36,10 @@ func _physics_process(delta):
 	
 	# camera controls for the pad, they work mostly but are still kind of janky for some reason with the new pad
 	_camera = get_node("Head/Camera3d")
-	print(Input.get_joy_axis(1, JOY_AXIS_RIGHT_Y))
+	print(Input.get_joy_axis(0, JOY_AXIS_RIGHT_Y))
 		
-	var y = Input.get_joy_axis(1, JOY_AXIS_RIGHT_X)
-	var x = Input.get_joy_axis(1, JOY_AXIS_RIGHT_Y)
+	var y = Input.get_joy_axis(0, JOY_AXIS_RIGHT_X)
+	var x = Input.get_joy_axis(0, JOY_AXIS_RIGHT_Y)
 		
 	if abs(y) > mouse_dead:
 		rotate_y(deg_to_rad(y * -mouse_sense_pad))
