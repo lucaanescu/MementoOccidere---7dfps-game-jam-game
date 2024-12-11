@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bddroqhpvhfxl"]
+[gd_scene load_steps=8 format=3 uid="uid://bddroqhpvhfxl"]
 
 [ext_resource type="Material" uid="uid://dh7nf4veky411" path="res://Textures/Ceiling/roof.tres" id="1_bx6cd"]
 [ext_resource type="PackedScene" uid="uid://ctjx0tjkd2gw7" path="res://Player.tscn" id="1_rj1ah"]
@@ -10,8 +10,6 @@ lightmap_size_hint = Vector2i(152, 152)
 material = ExtResource("1_bx6cd")
 uv2_padding = 2.3
 size = Vector2(30, 30)
-
-[sub_resource type="PlaneMesh" id="PlaneMesh_76sd8"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o7d36"]
 
@@ -25,75 +23,101 @@ light_color = Color(0.217747, 0.27578, 4.81308e-08, 1)
 light_energy = 3.667
 spot_range = 22.306
 
-[node name="Node3d" parent="." instance=ExtResource("1_rj1ah")]
-transform = Transform3D(50, 0, 0, 0, 51.913, 0, 0, 0, 57.315, 3.26027, 0.978726, 1.18796)
-
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -0.0139447, -0.999903, 0, 0.999903, -0.0139447, 0, 8.4525, 0)
+transform = Transform3D(1, 0, 0, 0, -0.0139447, -0.999903, 0, 0.999903, -0.0139447, 0, 3.85159, 0)
 material_override = ExtResource("1_bx6cd")
 mesh = SubResource("QuadMesh_js4hu")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="MeshInstance3D"]
-transform = Transform3D(9.06044, 0, 0, 0, 1.04578, -2.98023e-08, 0, 7.45058e-09, 4.28231, -6.70231, -3.53706, 4.24948)
-material_override = ExtResource("3_nmrga")
-mesh = SubResource("PlaneMesh_76sd8")
+[node name="Node3d" parent="." instance=ExtResource("1_rj1ah")]
+transform = Transform3D(50, 0, 0, 0, 51.913, 0, 0, 0, 57.315, 3.26027, 0.978726, 1.18796)
 
-[node name="MeshInstance3D4" type="MeshInstance3D" parent="MeshInstance3D"]
-transform = Transform3D(9.06044, 0, 0, 0, 1.04578, -3.35276e-08, 0, 8.3819e-09, 4.28231, 13.5874, -3.53706, 4.24948)
+[node name="MeshInstance3D12" type="CSGBox3D" parent="."]
+transform = Transform3D(9.06044, 0, 0, 0, -0.0148103, -9.06629, 0, 1.06197, -0.126439, 7.20361, 4.25276, -3.59598)
 material_override = ExtResource("3_nmrga")
 material_overlay = SubResource("StandardMaterial3D_o7d36")
-mesh = SubResource("PlaneMesh_76sd8")
+use_collision = true
+size = Vector3(1, 0.244, 1)
+material = ExtResource("3_nmrga")
 
-[node name="MeshInstance3D5" type="MeshInstance3D" parent="MeshInstance3D"]
-transform = Transform3D(9.06044, 0, 0, 0, 1.04578, -4.09782e-08, 0, 1.02445e-08, 4.28231, 6.96471, -3.59361, 0.194644)
+[node name="MeshInstance3D4" type="CSGBox3D" parent="."]
+transform = Transform3D(7.07029, 0, 0, 0, -0.0148107, -9.07628, 0, 1.062, -0.126578, -2.6951, 4.38505, -3.59598)
+material_override = ExtResource("3_nmrga")
+use_collision = true
+size = Vector3(1, 0.244, 1)
+material = ExtResource("3_nmrga")
+
+[node name="MeshInstance3D5" type="CSGBox3D" parent="."]
+transform = Transform3D(9.06044, 0, 0, 0, -0.0146435, -5.55505, 0, 1.05001, -0.0774711, 4.83127, 5.94301, -3.57837)
 material_override = ExtResource("3_nmrga")
 material_overlay = SubResource("StandardMaterial3D_o7d36")
-mesh = SubResource("PlaneMesh_76sd8")
+use_collision = true
+size = Vector3(1, 0.244, 1)
+material = ExtResource("3_nmrga")
 
-[node name="MeshInstance3D7" type="MeshInstance3D" parent="MeshInstance3D"]
-transform = Transform3D(-9.05763, -0.0260225, 0.00148607, 0.225455, -1.04505, 0.119401, -0.0031442, 0.0291587, 4.28065, 15.932, 7.38932, 4.70065)
+[node name="MeshInstance3D7" type="CSGBox3D" parent="."]
+transform = Transform3D(-9.05763, -0.0260225, 0.00148607, 2.32831e-10, -0.014583, -4.28189, 0.225477, -1.04536, 0.059697, 1.00059, -0.975229, 7.93095)
 material_override = ExtResource("3_nmrga")
 material_overlay = SubResource("StandardMaterial3D_o7d36")
-mesh = SubResource("PlaneMesh_76sd8")
+use_collision = true
+size = Vector3(1, 0.244, 0.875)
+material = ExtResource("3_nmrga")
 
-[node name="MeshInstance3D11" type="MeshInstance3D" parent="MeshInstance3D"]
-transform = Transform3D(-9.05763, -0.0260225, 0.00148607, 0.225455, -1.04505, 0.119401, -0.0031442, 0.0291587, 4.28065, -9.7795, 8.09536, 4.6908)
+[node name="MeshInstance3D11" type="CSGBox3D" parent="."]
+transform = Transform3D(-9.05763, -0.0260225, 0.00148607, 2.32831e-10, -0.014583, -4.28189, 0.225477, -1.04537, 0.059697, 1.07748, 3.15623, 7.87234)
 material_override = ExtResource("3_nmrga")
 material_overlay = SubResource("StandardMaterial3D_o7d36")
-mesh = SubResource("PlaneMesh_76sd8")
+use_collision = true
+size = Vector3(0.595, 0.24409, 1.506)
+material = ExtResource("3_nmrga")
 
-[node name="MeshInstance3D8" type="MeshInstance3D" parent="MeshInstance3D"]
-transform = Transform3D(-2.79492, -0.0255746, 0.00148643, 0.0695688, -1.02706, 0.11943, -0.00097021, 0.0286569, 4.28167, 3.07534, 7.74049, 4.69575)
+[node name="MeshInstance3D8" type="CSGBox3D" parent="."]
+transform = Transform3D(-2.79492, -0.0255746, 0.00148643, 1.18744e-08, -0.0143324, -4.28302, 0.0695755, -1.02734, 0.0597121, 8.03375, 2.38795, 7.70356)
 material_override = ExtResource("3_nmrga")
 material_overlay = SubResource("StandardMaterial3D_o7d36")
-mesh = SubResource("PlaneMesh_76sd8")
+use_collision = true
+size = Vector3(2.044, 0.244, 1.589)
+material = ExtResource("3_nmrga")
 
-[node name="MeshInstance3D9" type="MeshInstance3D" parent="MeshInstance3D"]
-transform = Transform3D(-9.05763, -0.0260225, 0.00148607, 0.225455, -1.04505, 0.119401, -0.0031442, 0.0291587, 4.28065, 2.26922, 7.66438, 1.2837)
+[node name="MeshInstance3D9" type="CSGBox3D" parent="."]
+transform = Transform3D(-9.05763, -0.0260225, 0.00148607, 0, -0.014583, -4.28189, 0.225477, -1.04537, 0.059697, 1.62434, 6.08175, 7.825)
 material_override = ExtResource("3_nmrga")
 material_overlay = SubResource("StandardMaterial3D_o7d36")
-mesh = SubResource("PlaneMesh_76sd8")
+use_collision = true
+size = Vector3(2.036, 0.244, 1.736)
+material = ExtResource("3_nmrga")
 
-[node name="MeshInstance3D10" type="MeshInstance3D" parent="MeshInstance3D"]
-transform = Transform3D(-9.05763, -0.0260225, 0.00148607, 0.225455, -1.04505, 0.119401, -0.0031442, 0.0291587, 4.28065, 2.26922, 7.91135, 11.633)
+[node name="MeshInstance3D10" type="CSGBox3D" parent="."]
+transform = Transform3D(-9.05763, -0.0260225, 0.00148607, 0, -0.014583, -4.28189, 0.225477, -1.04536, 0.059697, -7.37114, 2.35233, 8.07491)
 material_override = ExtResource("3_nmrga")
 material_overlay = SubResource("StandardMaterial3D_o7d36")
-mesh = SubResource("PlaneMesh_76sd8")
+use_collision = true
+size = Vector3(1, 0.244, 1.289)
+material = ExtResource("3_nmrga")
 
-[node name="MeshInstance3D6" type="MeshInstance3D" parent="MeshInstance3D"]
-transform = Transform3D(9.06044, 0, 0, 0, 1.04578, -5.96046e-08, 0, 1.49012e-08, 4.28231, 3.07895, -7.65657, 4.34431)
+[node name="MeshInstance3D6" type="CSGBox3D" parent="."]
+transform = Transform3D(9.06044, 0, 0, 0, -0.0145833, -4.28189, 0, 1.04567, -0.0597165, 1.97018, 4.40554, -7.58611)
 material_override = ExtResource("3_nmrga")
-mesh = SubResource("PlaneMesh_76sd8")
+use_collision = true
+size = Vector3(1.315, 0.244, 2.089)
+material = ExtResource("3_nmrga")
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="MeshInstance3D"]
-transform = Transform3D(-0.00154589, -1.04567, 0.0597859, 9.05976, -4.57076e-08, 0.052317, -0.110681, 0.0146013, 4.28157, 10.5633, 0.928171, 4.1872)
+[node name="MeshInstance3D2" type="CSGBox3D" parent="."]
+transform = Transform3D(-0.00223424, -1.06225, 0.12793, -0.0226415, -0.0148313, -9.16236, 13.0948, -0.000206884, -0.0158202, 10.5633, 4.25276, 0.869692)
 material_override = ExtResource("3_nmrga")
-mesh = SubResource("PlaneMesh_76sd8")
+use_collision = true
+size = Vector3(1, 0.244, 1)
+material = ExtResource("3_nmrga")
 
-[node name="MeshInstance3D3" type="MeshInstance3D" parent="MeshInstance3D"]
-transform = Transform3D(1.5747, 1.02976, 0.0597859, -8.92212, 0.181583, 0.052317, 0.087032, -0.0165978, 4.28157, -5.79732, 0.928171, 4.1872)
+[node name="MeshInstance3D3" type="CSGBox3D" parent="."]
+transform = Transform3D(1.5747, 1.02976, 0.0597859, 0.0373927, 0.0140641, -4.28189, -8.92248, 0.181797, -0.00739333, -6.25751, 4.07687, 3.48995)
 material_override = ExtResource("3_nmrga")
-mesh = SubResource("PlaneMesh_76sd8")
+use_collision = true
+size = Vector3(1.587, 0.244, 2.159)
+material = ExtResource("3_nmrga")
+
+[node name="CSGMesh3D2" type="CSGMesh3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -0.0139447, -0.999903, 0, 0.999903, -0.0139447, 0, 2.32522, 0)
+use_collision = true
 
 [node name="CSGMesh3D" type="CSGMesh3D" parent="."]
 transform = Transform3D(14.1195, 0, 0, 0, 1, 0, 0, 0, 14.0821, 1.34417, 0, -6.03147)
