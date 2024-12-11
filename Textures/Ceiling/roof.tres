@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" load_steps=4 format=3 uid="uid://dh7nf4veky411"]
+
+[ext_resource type="Texture2D" uid="uid://bgusttew0r6ya" path="res://Textures/Ceiling/Concrete046_1K-JPG_Color.jpg" id="1_rjoqv"]
+[ext_resource type="Texture2D" uid="uid://dyyen4bq4ei1v" path="res://Textures/Ceiling/Concrete046_1K-JPG_NormalDX.jpg" id="2_vijts"]
+[ext_resource type="Texture2D" uid="uid://dnhrjbu7m1pdf" path="res://Textures/Ceiling/Concrete046_1K-JPG_Roughness.jpg" id="3_q0kgq"]
+
+[resource]
+albedo_texture = ExtResource("1_rjoqv")
+roughness_texture = ExtResource("3_q0kgq")
+normal_enabled = true
+normal_texture = ExtResource("2_vijts")

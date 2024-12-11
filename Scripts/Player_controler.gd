@@ -18,8 +18,8 @@ var look_delta : Vector2
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
 #locks the mouse in the center and makes it invisible (makes it an issue if there's a controler)
-#func _ready():
-	#Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+func _ready():
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	#just remember to wake this line up when you're done testing
 
 func _input(event):
