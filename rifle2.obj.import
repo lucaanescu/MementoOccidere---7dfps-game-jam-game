@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://c2xbdwkb4ycgd"
+path="res://.godot/imported/rifle2.obj-c460658b87fda40a234249a6b48cddcd.mesh"
+
+[deps]
+
+files=["res://.godot/imported/rifle2.obj-c460658b87fda40a234249a6b48cddcd.mesh"]
+
+source_file="res://rifle2.obj"
+dest_files=["res://.godot/imported/rifle2.obj-c460658b87fda40a234249a6b48cddcd.mesh", "res://.godot/imported/rifle2.obj-c460658b87fda40a234249a6b48cddcd.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

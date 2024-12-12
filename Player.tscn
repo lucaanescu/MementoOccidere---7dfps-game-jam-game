@@ -9,18 +9,19 @@ height = 0.014867
 
 [node name="Node3d" type="CharacterBody3D"]
 transform = Transform3D(50, 0, 0, 0, 51.913, 0, 0, 0, 57.315, 0, 0, 0)
+wall_min_slide_angle = 0.0506145
+floor_max_angle = 0.624828
 script = ExtResource("1_temn3")
 
 [node name="CollisionShape3d" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 2.42708, 0, 0, 0, 1, 0, 0, 0)
+transform = Transform3D(1.03, 0, 0, 0, 2.5, 0, 0, 0, 1.03, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_phyot")
 
-[node name="Head" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 2.42708, 0, 0, 0, 1, 0, 0, 0)
+[node name="Camera3d" type="Camera3D" parent="."]
+transform = Transform3D(0.02, 0, 0, 0, 0.019263, 0, 0, 0, 0.0174474, 0, 0.0088272, 0)
+fov = 83.5
+near = 0.042
 
-[node name="Camera3d" type="Camera3D" parent="Head"]
-transform = Transform3D(5.435, 0, 0, 0, 2.043, 0, 0, 0, 4.755, 0, 0.004, 0)
-fov = 84.375
-
-[node name="rifle3" parent="Head/Camera3d" instance=ExtResource("2_mcrg4")]
+[node name="rifle3" parent="Camera3d" instance=ExtResource("2_mcrg4")]
+physics_interpolation_mode = 2
 transform = Transform3D(-6.55671e-09, 9.90035e-16, -0.15, 2.35159e-08, 0.155739, -8.58829e-23, -0.171945, 2.5963e-08, 7.51595e-09, 0.322225, -0.958321, -0.314384)

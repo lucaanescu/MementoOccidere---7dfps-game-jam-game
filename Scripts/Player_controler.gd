@@ -6,7 +6,6 @@ var _camera : Camera3D
 #Base values of the game that will change around
 var SPEED = 4
 var Sprinting = 7
-const JUMP_VELOCITY = 4.5
 const mouse_sense = 0.1
 const mouse_sense_pad = 5
 var mouse_dead = 0.3
@@ -23,19 +22,19 @@ func _ready():
 	#just remember to wake this line up when you're done testing
 
 func _input(event):
-	_camera = get_node("Head/Camera3d")
+	_camera = get_node("Camera3d")
 	
 	if event is InputEventMouseMotion:
 		# Actually selecting the variable for the camera in the tree while the game runs
 		rotate_y(deg_to_rad(event.relative.x * -mouse_sense))
 		_camera.rotate_x(deg_to_rad(event.relative.y * -mouse_sense))
-		_camera.rotation.x = clamp(_camera.rotation.x,deg_to_rad(-79),deg_to_rad(79))
+		_camera.rotation.x = clamp(_camera.rotation.x,deg_to_rad(-89),deg_to_rad(89))
 		# Ok degree to radians is actually good
 
 func _physics_process(delta):
 	
 	# camera controls for the pad, they work mostly but are still kind of janky for some reason with the new pad
-	_camera = get_node("Head/Camera3d")
+	_camera = get_node("Camera3d")
 	print(Input.get_joy_axis(0, JOY_AXIS_RIGHT_Y))
 		
 	var y = Input.get_joy_axis(0, JOY_AXIS_RIGHT_X)
