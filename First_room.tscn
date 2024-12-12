@@ -50,6 +50,41 @@ use_collision = true
 size = Vector3(1, 0.244, 1.07)
 material = ExtResource("3_nmrga")
 
+[node name="MeshInstance3D8" type="CSGBox3D" parent="."]
+transform = Transform3D(7.07029, 0, 0, 0, -0.0148107, -9.07628, 0, 1.062, -0.126578, -5.185, 4.385, 7.345)
+material_override = ExtResource("3_nmrga")
+use_collision = true
+size = Vector3(1, 0.244, 1)
+material = ExtResource("3_nmrga")
+
+[node name="MeshInstance3D12" type="CSGBox3D" parent="."]
+transform = Transform3D(7.07029, 0, 0, 0, -0.0148107, -9.07628, 0, 1.062, -0.126578, 7.04691, 4.38505, 7.34047)
+material_override = ExtResource("3_nmrga")
+use_collision = true
+size = Vector3(1, 0.244, 1)
+material = ExtResource("3_nmrga")
+
+[node name="MeshInstance3D9" type="CSGBox3D" parent="."]
+transform = Transform3D(2.77986, 0, 0, 0, -0.0148107, -9.07628, 0, 1.062, -0.126578, 0.848, 2.716, 7.321)
+material_override = ExtResource("3_nmrga")
+use_collision = true
+size = Vector3(1, 0.244, 1)
+material = ExtResource("3_nmrga")
+
+[node name="MeshInstance3D10" type="CSGBox3D" parent="."]
+transform = Transform3D(18.9343, 0, 0, 0, -0.014652, -2.10346, 0, 1.05062, -0.0293348, 1.8781, -0.367618, 7.27673)
+material_override = ExtResource("3_nmrga")
+use_collision = true
+size = Vector3(1, 0.244, 1.07)
+material = ExtResource("3_nmrga")
+
+[node name="MeshInstance3D11" type="CSGBox3D" parent="."]
+transform = Transform3D(18.5086, 0, 0, 0, -0.0146741, -3.0739, 0, 1.05221, -0.0428687, 1.938, 3.431, 7.33)
+material_override = ExtResource("3_nmrga")
+use_collision = true
+size = Vector3(1, 0.244, 1.07)
+material = ExtResource("3_nmrga")
+
 [node name="MeshInstance3D6" type="CSGBox3D" parent="."]
 transform = Transform3D(9.06044, 0, 0, 0, -0.0145833, -4.28189, 0, 1.04567, -0.0597165, 1.97018, 4.40554, -7.58611)
 material_override = ExtResource("3_nmrga")
