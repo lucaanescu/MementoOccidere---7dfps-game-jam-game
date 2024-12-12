@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://dqbxu6nwqifm1"]
+
+[ext_resource type="PackedScene" uid="uid://ddyncv61tbqe2" path="res://Room parts/Table_round.fbx" id="1_cjefg"]
+[ext_resource type="Texture2D" uid="uid://b5ybokkbn25od" path="res://Room parts/VintageCircularDiningTableTypeCDarkWood_AlbedoTransparency.png" id="2_h6o3b"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_os5xd"]
+albedo_texture = ExtResource("2_h6o3b")
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_5mgbt"]
+height = 0.0131202
+radius = 0.00680116
+
+[node name="Table_round" instance=ExtResource("1_cjefg")]
+
+[node name="Vintage Circular Dining Table Type C Dark Wood" parent="." index="0"]
+material_override = SubResource("StandardMaterial3D_os5xd")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Vintage Circular Dining Table Type C Dark Wood" index="0"]
+transform = Transform3D(0.693167, 0, 0, 0, 0.718841, -2.13163e-14, 0, 1.42109e-14, 0.572714, 0, -3.951e-10, 0.00331434)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Vintage Circular Dining Table Type C Dark Wood/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, -0.000251228, 0.00220286)
+shape = SubResource("CylinderShape3D_5mgbt")

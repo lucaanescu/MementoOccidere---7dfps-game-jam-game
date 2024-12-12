@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://uh8fs5c7hcqn"]
 
 [ext_resource type="PackedScene" uid="uid://cb6qpnfi2nqf0" path="res://Room parts/Victorian Bed.fbx" id="1_prxbc"]
-[ext_resource type="Texture2D" uid="uid://r6bn4pkdp2iv" path="res://Room parts/VintageCircularDiningTableTypeCDarkWood_AlbedoTransparency.png" id="2_105i7"]
+[ext_resource type="Texture2D" uid="uid://b5ybokkbn25od" path="res://Room parts/VintageCircularDiningTableTypeCDarkWood_AlbedoTransparency.png" id="2_105i7"]
 [ext_resource type="Texture2D" uid="uid://dvvb40b7pp2gd" path="res://Room parts/VintageCircularDiningTableTypeCLightWood_AlbedoTransparency.png" id="3_0hhgh"]
 [ext_resource type="Texture2D" uid="uid://cnsgfpyn5yx32" path="res://Room parts/VintageCircularDiningTableTypeCPainted_AlbedoTransparency.png" id="4_55npx"]
 

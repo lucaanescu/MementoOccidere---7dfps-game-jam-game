@@ -2,6 +2,9 @@ extends CharacterBody3D
 
 # setting up the fact that camera 3D is a variable that can exist in the world
 var _camera : Camera3D
+# declaring a variable for if the player is using a controler and a vector2 also audio
+var look_delta : Vector2
+var Footsteps : AudioStreamPlayer3D
 
 #Base values of the game that will change around
 var SPEED = 4
@@ -9,9 +12,6 @@ var Sprinting = 7
 const mouse_sense = 0.1
 const mouse_sense_pad = 5
 var mouse_dead = 0.3
-
-# declaring a variable for if the player is using a controler and a vector2
-var look_delta : Vector2
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
@@ -64,8 +64,12 @@ func _physics_process(delta):
 	if direction:
 		velocity.x = direction.x * SPEED
 		velocity.z = direction.z * SPEED
+		#This is the walking sound effects
+		Footsteps = get_node("Sounds/Walk")
+		Footsteps.play()
+		Footsteps.pitch_scale = randf_range(0.8,1.3)
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.z = move_toward(velocity.z, 0, SPEED)
-
+		
 	move_and_slide()
