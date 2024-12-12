@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bddroqhpvhfxl"]
+[gd_scene load_steps=13 format=3 uid="uid://bddroqhpvhfxl"]
 
 [ext_resource type="Material" uid="uid://dh7nf4veky411" path="res://Textures/Ceiling/roof.tres" id="1_bx6cd"]
 [ext_resource type="PackedScene" uid="uid://ctjx0tjkd2gw7" path="res://Player.tscn" id="1_rj1ah"]
@@ -6,6 +6,9 @@
 [ext_resource type="Material" uid="uid://2l86n5jpn7ff" path="res://Textures/Ceiling/walls.tres" id="3_nmrga"]
 [ext_resource type="PackedScene" uid="uid://uh8fs5c7hcqn" path="res://Room parts/victorian_bed.tscn" id="5_rna0y"]
 [ext_resource type="PackedScene" uid="uid://dhrrdejd4qdx2" path="res://bedlamp.tscn" id="7_2f51s"]
+[ext_resource type="PackedScene" uid="uid://j3eib418ryvf" path="res://tab;e.tscn" id="8_14dbt"]
+[ext_resource type="PackedScene" uid="uid://ohd12ntav3t" path="res://Sofa.tscn" id="8_43ql1"]
+[ext_resource type="PackedScene" uid="uid://dqbxu6nwqifm1" path="res://table_round_obj.tscn" id="9_jtb8i"]
 
 [sub_resource type="Environment" id="Environment_4gv2q"]
 background_mode = 2
@@ -130,3 +133,12 @@ light_indirect_energy = 5.082
 light_volumetric_fog_energy = 3.449
 light_size = 0.071
 omni_range = 5.59839
+
+[node name="wooden table2" parent="." instance=ExtResource("8_14dbt")]
+transform = Transform3D(-5.46392e-08, 0, 1.25, 0, 1.25, 0, -1.25, 0, -5.46392e-08, -2.11088, 0, 1.44517)
+
+[node name="ДИВАН_Sofa_3" parent="." instance=ExtResource("8_43ql1")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 3.94098, 0, 3.70597)
+
+[node name="Table_round" parent="." instance=ExtResource("9_jtb8i")]
+transform = Transform3D(1.25, 0, 0, 0, 1.25, 0, 0, 0, 1.25, 3.99987, 0, 1.23256)
