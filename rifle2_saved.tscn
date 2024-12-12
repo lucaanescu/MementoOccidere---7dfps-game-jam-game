@@ -1,9 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://qd5rybhrhh2s"]
-
-[ext_resource type="PackedScene" uid="uid://dofr238trwfbr" path="res://rifle2.fbx" id="1_wala0"]
-
-[node name="rifle2" type="Node3D"]
-
-[node name="rifle2" parent="." instance=ExtResource("1_wala0")]
-physics_interpolation_mode = 2
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0363832, 0, 0.0244216)

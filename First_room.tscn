@@ -1,9 +1,14 @@
-[gd_scene load_steps=7 format=3 uid="uid://bddroqhpvhfxl"]
+[gd_scene load_steps=10 format=3 uid="uid://bddroqhpvhfxl"]
 
 [ext_resource type="Material" uid="uid://dh7nf4veky411" path="res://Textures/Ceiling/roof.tres" id="1_bx6cd"]
 [ext_resource type="PackedScene" uid="uid://ctjx0tjkd2gw7" path="res://Player.tscn" id="1_rj1ah"]
 [ext_resource type="Material" uid="uid://fuji13abgsr" path="res://Textures/Ceiling/Wooden floor.tres" id="3_488up"]
 [ext_resource type="Material" uid="uid://2l86n5jpn7ff" path="res://Textures/Ceiling/walls.tres" id="3_nmrga"]
+[ext_resource type="PackedScene" uid="uid://uh8fs5c7hcqn" path="res://Room parts/victorian_bed.tscn" id="5_rna0y"]
+[ext_resource type="PackedScene" uid="uid://dhrrdejd4qdx2" path="res://bedlamp.tscn" id="7_2f51s"]
+
+[sub_resource type="Environment" id="Environment_4gv2q"]
+background_mode = 2
 
 [sub_resource type="QuadMesh" id="QuadMesh_js4hu"]
 lightmap_size_hint = Vector2i(152, 152)
@@ -13,19 +18,14 @@ size = Vector2(30, 30)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_ao1kd"]
 
-[node name="Node3d" type="Node3D"]
-
-[node name="SpotLight3d" type="SpotLight3D" parent="."]
-transform = Transform3D(0.999909, 5.83187e-05, 0.0134734, -0.0134735, 0.004328, 0.9999, 0, -0.999991, 0.00432839, 0, 10.0408, 2.65104)
-light_color = Color(0.217747, 0.27578, 4.81308e-08, 1)
-light_energy = 3.667
-spot_range = 22.306
+[node name="Node3d" type="WorldEnvironment"]
+environment = SubResource("Environment_4gv2q")
 
 [node name="Node3d" parent="." instance=ExtResource("1_rj1ah")]
-transform = Transform3D(50, 0, 0, 0, 51.913, 0, 0, 0, 57.315, 1.26968, 1.0544, -0.857282)
+transform = Transform3D(-49.992, 0, 1.02829, 0, 51.913, 0, -0.897051, 0, -57.3058, 2.69542, 1.0544, -4.2195)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -0.0139447, -0.999903, 0, 0.999903, -0.0139447, 0, 3.85159, 0)
+transform = Transform3D(1, 0, 0, 0, -0.0139447, -0.999903, 0, 0.999903, -0.0139447, 0, 3.85159, -7.49428)
 material_override = ExtResource("1_bx6cd")
 mesh = SubResource("QuadMesh_js4hu")
 
@@ -93,14 +93,14 @@ size = Vector3(1.315, 0.244, 2.089)
 material = ExtResource("3_nmrga")
 
 [node name="MeshInstance3D2" type="CSGBox3D" parent="."]
-transform = Transform3D(-0.00223424, -1.06225, 0.12793, -0.0226415, -0.0148313, -9.16236, 13.0948, -0.000206884, -0.0158202, 10.5633, 4.25276, 0.869692)
+transform = Transform3D(-0.00223424, -1.06225, 0.12793, -0.0226415, -0.0148313, -9.16236, 13.0948, -0.000206884, -0.0158202, 4.85713, 4.25276, 0.869692)
 material_override = ExtResource("3_nmrga")
 use_collision = true
 size = Vector3(1, 0.244, 1)
 material = ExtResource("3_nmrga")
 
 [node name="MeshInstance3D3" type="CSGBox3D" parent="."]
-transform = Transform3D(1.5747, 1.02976, 0.0597859, 0.0373927, 0.0140641, -4.28189, -8.92248, 0.181797, -0.00739333, -6.25751, 4.07687, 3.48995)
+transform = Transform3D(-3.96045e-07, 1.04578, -1.87186e-07, 0, -4.57124e-08, -4.28231, -9.06045, -4.57124e-08, 8.18215e-15, -2.31304, 4.07687, 0.195121)
 material_override = ExtResource("3_nmrga")
 use_collision = true
 size = Vector3(1.587, 0.244, 2.159)
@@ -116,3 +116,17 @@ material_override = ExtResource("3_488up")
 use_collision = true
 mesh = SubResource("PlaneMesh_ao1kd")
 material = ExtResource("3_488up")
+
+[node name="Victorian Bed" parent="." instance=ExtResource("5_rna0y")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.617049, 0, -0.429184)
+
+[node name="Bedlamp" parent="." instance=ExtResource("7_2f51s")]
+transform = Transform3D(1.75, 0, 0, 0, 1.75, 0, 0, 0, 1.75, -1.86536, 1.03157, 1.41966)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Bedlamp"]
+transform = Transform3D(0.571429, 0, 0, 0, 0.571429, 0, 0, 0, 0.571429, 0.00414515, 0.353055, 0)
+light_energy = 4.265
+light_indirect_energy = 5.082
+light_volumetric_fog_energy = 3.449
+light_size = 0.071
+omni_range = 5.59839

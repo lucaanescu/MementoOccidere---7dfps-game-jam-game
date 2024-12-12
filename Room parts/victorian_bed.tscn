@@ -1,0 +1,39 @@
+[gd_scene load_steps=10 format=3 uid="uid://uh8fs5c7hcqn"]
+
+[ext_resource type="PackedScene" uid="uid://cb6qpnfi2nqf0" path="res://Room parts/Victorian Bed.fbx" id="1_prxbc"]
+[ext_resource type="Texture2D" uid="uid://r6bn4pkdp2iv" path="res://Room parts/VintageCircularDiningTableTypeCDarkWood_AlbedoTransparency.png" id="2_105i7"]
+[ext_resource type="Texture2D" uid="uid://dvvb40b7pp2gd" path="res://Room parts/VintageCircularDiningTableTypeCLightWood_AlbedoTransparency.png" id="3_0hhgh"]
+[ext_resource type="Texture2D" uid="uid://cnsgfpyn5yx32" path="res://Room parts/VintageCircularDiningTableTypeCPainted_AlbedoTransparency.png" id="4_55npx"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d6yu2"]
+albedo_texture = ExtResource("2_105i7")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_c7erk"]
+size = Vector3(0.00960922, 0.0085156, 0.00694275)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mkjoe"]
+albedo_texture = ExtResource("3_0hhgh")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_an8pe"]
+albedo_texture = ExtResource("3_0hhgh")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4u0pe"]
+albedo_texture = ExtResource("4_55npx")
+
+[node name="Victorian Bed" instance=ExtResource("1_prxbc")]
+
+[node name="victorian_bed_wood" parent="." index="0"]
+material_overlay = SubResource("StandardMaterial3D_d6yu2")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="victorian_bed_wood" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="victorian_bed_wood/StaticBody3D" index="0"]
+transform = Transform3D(2.05622, 0, 0, 0, 2.84411, -8.52651e-14, 0, 1.13687e-13, 1.30834, 0.000114586, 0.000528557, 0.00634974)
+shape = SubResource("BoxShape3D_c7erk")
+
+[node name="victorian_bed_mattres" parent="." index="1"]
+material_override = SubResource("StandardMaterial3D_mkjoe")
+material_overlay = SubResource("StandardMaterial3D_an8pe")
+
+[node name="pollows" parent="." index="2"]
+material_overlay = SubResource("StandardMaterial3D_4u0pe")
