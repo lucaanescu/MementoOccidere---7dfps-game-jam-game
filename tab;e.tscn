@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://j3eib418ryvf"]
+[gd_scene load_steps=5 format=3 uid="uid://j3eib418ryvf"]
 
 [ext_resource type="PackedScene" uid="uid://bymj4oanqde5j" path="res://wooden table.fbx" id="1_x0si5"]
 [ext_resource type="Texture2D" uid="uid://dowft4xeh0vmm" path="res://Table_color.png" id="2_xbjw7"]
@@ -6,7 +6,18 @@
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rugya"]
 albedo_texture = ExtResource("2_xbjw7")
 
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_owdkg"]
+height = 0.0214575
+radius = 0.00591746
+
 [node name="wooden table" instance=ExtResource("1_x0si5")]
 
 [node name="Object_3" parent="." index="1"]
 material_override = SubResource("StandardMaterial3D_rugya")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Object_3" index="0"]
+transform = Transform3D(0.680981, 0, 0, 0, 0.465809, 0, 0, 0, 0.437266, 0, 0, 0.000671252)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Object_3/StaticBody3D" index="0"]
+transform = Transform3D(0.779448, 0, 0, 0, 0.803864, 0, 0, 0, 0.707482, -0.000116108, 0.00891125, 0.0023297)
+shape = SubResource("CylinderShape3D_owdkg")
