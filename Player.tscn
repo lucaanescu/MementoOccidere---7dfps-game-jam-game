@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://ctjx0tjkd2gw7"]
+[gd_scene load_steps=6 format=3 uid="uid://ctjx0tjkd2gw7"]
 
 [ext_resource type="Script" path="res://Scripts/Player_controler.gd" id="1_temn3"]
 [ext_resource type="PackedScene" uid="uid://qd5rybhrhh2s" path="res://Gun parts/rifle2_saved.tscn" id="2_mcrg4"]
+[ext_resource type="Texture2D" uid="uid://0klveol3jk3l" path="res://Reticle_no_gun.png" id="3_0eadb"]
 [ext_resource type="AudioStream" uid="uid://dyfxjf8ue4bll" path="res://Walking sfx.mp3" id="3_uhp1q"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_phyot"]
@@ -28,6 +29,20 @@ near = 0.042
 physics_interpolation_mode = 2
 transform = Transform3D(-6.55671e-09, 9.90035e-16, -0.15, 2.35159e-08, 0.155739, -8.58829e-23, -0.171945, 2.5963e-08, 7.51595e-09, 0.322225, -0.958321, -0.314384)
 visible = false
+
+[node name="RayCast3D" type="RayCast3D" parent="Camera3d"]
+transform = Transform3D(1, 0, 0, 0, -0.030242, -0.999543, 0, 0.999543, -0.030242, 0, 0, 0)
+target_position = Vector3(0, -5, 0)
+
+[node name="Hand" type="Node3D" parent="Camera3d/RayCast3D"]
+
+[node name="TextureRect" type="TextureRect" parent="Camera3d"]
+offset_left = 560.0
+offset_top = 293.0
+offset_right = 624.0
+offset_bottom = 357.0
+texture = ExtResource("3_0eadb")
+stretch_mode = 3
 
 [node name="Sounds" type="Node3D" parent="."]
 
