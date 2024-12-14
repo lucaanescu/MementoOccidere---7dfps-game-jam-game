@@ -5,6 +5,7 @@ var _camera : Camera3D
 # declaring a variable for if the player is using a controler and a vector2 also audio
 var look_delta : Vector2
 var Footsteps : AudioStreamPlayer3D
+var cocking : AudioStreamPlayer3D
 var foot_timer : Timer
 var Reach : RayCast3D
 var gun : Node3D
@@ -15,9 +16,6 @@ var Sprinting = 5
 const mouse_sense = 0.1
 const mouse_sense_pad = 5
 var mouse_dead = 0.3
-
-#variables that dictate if the player ahs the gun or not
-var has_gun = false
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
@@ -32,6 +30,7 @@ func _ready():
 func _pick_up_gun():
 	Reach = get_node("Camera3d/Reach")
 	gun = get_node("Camera3d/rifle3")
+	cocking = get_node("Sounds/Gun loading")
 	
 	if Reach.is_colliding():
 		
@@ -40,7 +39,8 @@ func _pick_up_gun():
 		if hit.get_name() == "Gun_body":
 			hit.free()
 			gun.visible = true
-			print("there is a gun here")
+			cocking.volume_db = -15
+			cocking.play()
 
 func _input(event):
 	_camera = get_node("Camera3d")
@@ -51,7 +51,6 @@ func _input(event):
 		_camera.rotate_x(deg_to_rad(event.relative.y * -mouse_sense))
 		_camera.rotation.x = clamp(_camera.rotation.x,deg_to_rad(-89),deg_to_rad(89))
 		# Ok degree to radians is actually good
-		
 		
 # This code just plays sounds
 func _play_sound():
