@@ -27,6 +27,7 @@ near = 0.042
 [node name="rifle3" parent="Camera3d" instance=ExtResource("2_mcrg4")]
 physics_interpolation_mode = 2
 transform = Transform3D(-6.55671e-09, 9.90035e-16, -0.15, 2.35159e-08, 0.155739, -8.58829e-23, -0.171945, 2.5963e-08, 7.51595e-09, 0.322225, -0.958321, -0.314384)
+visible = false
 
 [node name="Sounds" type="Node3D" parent="."]
 

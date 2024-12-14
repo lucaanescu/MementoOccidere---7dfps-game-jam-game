@@ -56,10 +56,13 @@ func _walking_sfx(start = true):
 # For running
 func _sprinting():
 		# Some very basic running mechanics
+	foot_timer = get_node("Sounds/Timer")
 	if Input.is_action_pressed("Sprint"):
 		SPEED = Sprinting
+		foot_timer.wait_time = 0.35
 	else:
 		SPEED = 3
+		foot_timer.wait_time = 0.5
 		
 # if the player is using a controler it lets them control that
 func _Controler_controls():
