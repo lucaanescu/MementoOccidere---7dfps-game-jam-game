@@ -38,12 +38,9 @@ func _pick_up_gun():
 		var hit = Reach.get_collider()
 		
 		if hit.get_name() == "Gun_body":
+			hit.free()
 			gun.visible = true
 			print("there is a gun here")
-		else:
-			print(hit.name)
-			gun.visible = false
-			print("theres no gun here")
 
 func _input(event):
 	_camera = get_node("Camera3d")
