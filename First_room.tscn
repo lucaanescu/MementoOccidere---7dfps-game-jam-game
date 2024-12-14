@@ -169,5 +169,5 @@ light_volumetric_fog_energy = 3.449
 light_size = 0.071
 omni_range = 5.59839
 
-[node name="Node3D2" parent="." instance=ExtResource("11_byqd4")]
+[node name="Gun Pickup" parent="." instance=ExtResource("11_byqd4")]
 transform = Transform3D(0.00167811, -0.149991, -1.06167e-10, 0.139957, 0.00156585, -0.0539409, 0.0539375, 0.000603458, 0.139966, 1.06625, 0.685704, 6.83331)

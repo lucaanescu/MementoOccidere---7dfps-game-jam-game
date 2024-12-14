@@ -6,6 +6,8 @@ var _camera : Camera3D
 var look_delta : Vector2
 var Footsteps : AudioStreamPlayer3D
 var foot_timer : Timer
+var Reach : RayCast3D
+var gun : Node3D
 
 #Base values of the game that will change around
 var SPEED = 3
@@ -13,6 +15,9 @@ var Sprinting = 5
 const mouse_sense = 0.1
 const mouse_sense_pad = 5
 var mouse_dead = 0.3
+
+#variables that dictate if the player ahs the gun or not
+var has_gun = false
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
@@ -22,6 +27,19 @@ func _ready():
 	get_node ("Sounds/Timer").timeout.connect(_play_sound)
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	#just remember to wake this line up when you're done testing
+
+#This code acknologes the colision between the floor gun and the player then awakening the gun their carrying
+func _pick_up_gun():
+	Reach = get_node("Camera3d/Reach")
+	gun = get_node("Camera3d/rifle3")
+	
+	if Reach.get_collider():
+		if Reach.get_collider().get_name() == "Gun Pickup":
+			gun.visible = true
+			print("there is a gun here")
+		else:
+			gun.visible = false
+			print("theres no gun here")
 
 func _input(event):
 	_camera = get_node("Camera3d")
@@ -34,12 +52,13 @@ func _input(event):
 		# Ok degree to radians is actually good
 		
 		
+# This code just plays sounds
 func _play_sound():
 	Footsteps = get_node("Sounds/Walk")
 	Footsteps.pitch_scale = randf_range(0.8,1.3)
 	Footsteps.play()
 	
-# Walking portion that also adds the sound
+# Walking portion that also adds the sound and resets the delay between footsteps
 func _walking_sfx(start = true):
 	foot_timer = get_node("Sounds/Timer")
 	
@@ -88,7 +107,10 @@ func _physics_process(delta):
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y -= gravity * delta
-
+	
+	if Input.is_action_just_pressed("Use"):
+		_pick_up_gun()
+	
 	# Get the input direction and handle the movement/deceleration.
 	var input_dir = Input.get_vector("Left", "Right", "Forward", "Backward")
 	

@@ -1,18 +1,22 @@
-[gd_scene load_steps=3 format=3 uid="uid://7q2eb5c55x86"]
+[gd_scene load_steps=4 format=3 uid="uid://7q2eb5c55x86"]
 
 [ext_resource type="PackedScene" uid="uid://dofr238trwfbr" path="res://Gun parts/rifle2.fbx" id="1_2yhsy"]
+[ext_resource type="Script" path="res://gun_pickup_script.gd" id="1_bbm8b"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_hgon5"]
-size = Vector3(10.3636, 3.38034, 3.57825)
+size = Vector3(11.0055, 2.61712, 1.30079)
 
 [node name="Node3D" type="Node3D"]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
+script = ExtResource("1_bbm8b")
 
 [node name="rifle2" parent="." instance=ExtResource("1_2yhsy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.381329, -4.35413, 0.0156032)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="rifle2"]
+collision_layer = 2
+collision_mask = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="rifle2/StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0451, 5.46578, -0.0842896)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.107048, 4.56627, -0.0627937)
 shape = SubResource("BoxShape3D_hgon5")
