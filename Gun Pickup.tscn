@@ -13,10 +13,10 @@ script = ExtResource("1_bbm8b")
 [node name="rifle2" parent="." instance=ExtResource("1_2yhsy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.381329, -4.35413, 0.0156032)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="rifle2"]
+[node name="Gun_body" type="StaticBody3D" parent="rifle2"]
 collision_layer = 2
 collision_mask = 2
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="rifle2/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="rifle2/Gun_body"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.107048, 4.56627, -0.0627937)
 shape = SubResource("BoxShape3D_hgon5")
