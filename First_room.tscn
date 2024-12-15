@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://bddroqhpvhfxl"]
+[gd_scene load_steps=20 format=3 uid="uid://bddroqhpvhfxl"]
 
 [ext_resource type="Texture2D" uid="uid://ygs2lx25hasn" path="res://Room parts/steven-c-skydome-render.jpg" id="1_4mtk7"]
 [ext_resource type="PackedScene" uid="uid://ctjx0tjkd2gw7" path="res://Player.tscn" id="1_rj1ah"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://ohd12ntav3t" path="res://Room parts/Sofa.tscn" id="8_43ql1"]
 [ext_resource type="PackedScene" uid="uid://dqbxu6nwqifm1" path="res://Room parts/table_round_obj.tscn" id="9_jtb8i"]
 [ext_resource type="PackedScene" uid="uid://7q2eb5c55x86" path="res://Gun Pickup.tscn" id="11_byqd4"]
+[ext_resource type="PackedScene" uid="uid://b3wqpd6prosgf" path="res://single_page.fbx" id="12_cgvk0"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_6jx5a"]
 panorama = ExtResource("1_4mtk7")
@@ -171,3 +172,6 @@ omni_range = 5.59839
 
 [node name="Gun Pickup" parent="." instance=ExtResource("11_byqd4")]
 transform = Transform3D(0.00167811, -0.149991, -1.06167e-10, 0.139957, 0.00156585, -0.0539409, 0.0539375, 0.000603458, 0.139966, 1.06625, 0.685704, 6.83331)
+
+[node name="single_page" parent="." instance=ExtResource("12_cgvk0")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 3.77153, 1.04163, 1.08291)
