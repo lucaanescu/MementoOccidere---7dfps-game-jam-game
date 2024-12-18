@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dyfxjf8ue4bll"
+path="res://.godot/imported/Walking sfx.mp3-c042ad145699e911a8dca5eed9bda0a1.mp3str"
+
+[deps]
+
+source_file="res://Sounds/Walking sfx.mp3"
+dest_files=["res://.godot/imported/Walking sfx.mp3-c042ad145699e911a8dca5eed9bda0a1.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

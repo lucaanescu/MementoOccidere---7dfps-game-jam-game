@@ -1,20 +1,20 @@
 [gd_scene load_steps=20 format=3 uid="uid://bddroqhpvhfxl"]
 
-[ext_resource type="Texture2D" uid="uid://ygs2lx25hasn" path="res://Room parts/steven-c-skydome-render.jpg" id="1_4mtk7"]
-[ext_resource type="PackedScene" uid="uid://ctjx0tjkd2gw7" path="res://Player.tscn" id="1_rj1ah"]
-[ext_resource type="Material" uid="uid://fuji13abgsr" path="res://Textures/Ceiling/Wooden floor.tres" id="3_488up"]
-[ext_resource type="Texture2D" uid="uid://bgcc8lkb8bvyg" path="res://Textures/Ceiling/Plastic006_1K-JPG_Roughness.jpg" id="3_ftrcu"]
-[ext_resource type="Material" uid="uid://2l86n5jpn7ff" path="res://Textures/Ceiling/walls.tres" id="3_nmrga"]
-[ext_resource type="PackedScene" uid="uid://uh8fs5c7hcqn" path="res://Room parts/victorian_bed.tscn" id="5_rna0y"]
-[ext_resource type="PackedScene" uid="uid://dhrrdejd4qdx2" path="res://bedlamp.tscn" id="7_2f51s"]
-[ext_resource type="PackedScene" uid="uid://j3eib418ryvf" path="res://Room parts/tab;e.tscn" id="8_14dbt"]
-[ext_resource type="PackedScene" uid="uid://ohd12ntav3t" path="res://Room parts/Sofa.tscn" id="8_43ql1"]
-[ext_resource type="PackedScene" uid="uid://dqbxu6nwqifm1" path="res://Room parts/table_round_obj.tscn" id="9_jtb8i"]
-[ext_resource type="PackedScene" uid="uid://7q2eb5c55x86" path="res://Gun Pickup.tscn" id="11_byqd4"]
-[ext_resource type="PackedScene" uid="uid://b3wqpd6prosgf" path="res://single_page.fbx" id="12_cgvk0"]
+[ext_resource type="Texture2D" uid="uid://ygs2lx25hasn" path="res://Room parts/steven-c-skydome-render.jpg" id="1_fif3h"]
+[ext_resource type="PackedScene" uid="uid://ctjx0tjkd2gw7" path="res://Scenes/Player.tscn" id="2_fnn4v"]
+[ext_resource type="Texture2D" uid="uid://bgcc8lkb8bvyg" path="res://Textures/Ceiling/Plastic006_1K-JPG_Roughness.jpg" id="3_nlwi3"]
+[ext_resource type="Material" uid="uid://2l86n5jpn7ff" path="res://Textures/Ceiling/walls.tres" id="4_5yoel"]
+[ext_resource type="Material" uid="uid://fuji13abgsr" path="res://Textures/Ceiling/Wooden floor.tres" id="5_d56fa"]
+[ext_resource type="PackedScene" uid="uid://uh8fs5c7hcqn" path="res://Room parts/victorian_bed.tscn" id="6_4p17t"]
+[ext_resource type="PackedScene" uid="uid://dhrrdejd4qdx2" path="res://Scenes/bedlamp.tscn" id="7_cygen"]
+[ext_resource type="PackedScene" uid="uid://j3eib418ryvf" path="res://Room parts/tab;e.tscn" id="8_r3uuf"]
+[ext_resource type="PackedScene" uid="uid://ohd12ntav3t" path="res://Room parts/Sofa.tscn" id="9_5c6kt"]
+[ext_resource type="PackedScene" uid="uid://dqbxu6nwqifm1" path="res://Room parts/table_round_obj.tscn" id="10_1n6i0"]
+[ext_resource type="PackedScene" uid="uid://7q2eb5c55x86" path="res://Scenes/Gun Pickup.tscn" id="11_wfn6d"]
+[ext_resource type="PackedScene" uid="uid://b3wqpd6prosgf" path="res://Scenes/single_page.fbx" id="12_6e7i5"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_6jx5a"]
-panorama = ExtResource("1_4mtk7")
+panorama = ExtResource("1_fif3h")
 
 [sub_resource type="Sky" id="Sky_eoext"]
 sky_material = SubResource("PanoramaSkyMaterial_6jx5a")
@@ -24,23 +24,23 @@ background_mode = 2
 sky = SubResource("Sky_eoext")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pp26o"]
-albedo_texture = ExtResource("3_ftrcu")
+albedo_texture = ExtResource("3_nlwi3")
 
 [sub_resource type="QuadMesh" id="QuadMesh_js4hu"]
 lightmap_size_hint = Vector2i(152, 152)
-material = ExtResource("3_nmrga")
+material = ExtResource("4_5yoel")
 uv2_padding = 2.3
 size = Vector2(30, 30)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vdprf"]
-albedo_texture = ExtResource("1_4mtk7")
+albedo_texture = ExtResource("1_fif3h")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_ao1kd"]
 
 [node name="Node3d" type="WorldEnvironment"]
 environment = SubResource("Environment_4gv2q")
 
-[node name="Node3d" parent="." instance=ExtResource("1_rj1ah")]
+[node name="Node3d" parent="." instance=ExtResource("2_fnn4v")]
 transform = Transform3D(-49.992, 0, 1.02829, 0, 51.913, 0, -0.897051, 0, -57.3058, 2.69542, 1.0544, -4.2195)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
@@ -50,80 +50,80 @@ mesh = SubResource("QuadMesh_js4hu")
 
 [node name="MeshInstance3D4" type="CSGBox3D" parent="."]
 transform = Transform3D(7.07029, 0, 0, 0, -0.0148107, -9.07628, 0, 1.062, -0.126578, -1.61704, 4.38505, -3.59598)
-material_override = ExtResource("3_nmrga")
+material_override = ExtResource("4_5yoel")
 use_collision = true
 size = Vector3(1, 0.244, 1)
-material = ExtResource("3_nmrga")
+material = ExtResource("4_5yoel")
 
 [node name="MeshInstance3D5" type="CSGBox3D" parent="."]
 transform = Transform3D(7.07029, 0, 0, 0, -0.0148107, -9.07628, 0, 1.062, -0.126578, 6.99299, 4.38505, -3.59598)
-material_override = ExtResource("3_nmrga")
+material_override = ExtResource("4_5yoel")
 use_collision = true
 size = Vector3(1, 0.244, 1)
-material = ExtResource("3_nmrga")
+material = ExtResource("4_5yoel")
 
 [node name="MeshInstance3D7" type="CSGBox3D" parent="."]
 transform = Transform3D(7.07029, 0, 0, 0, -0.0148107, -9.07628, 0, 1.062, -0.126578, 3.265, 7.263, -3.556)
-material_override = ExtResource("3_nmrga")
+material_override = ExtResource("4_5yoel")
 use_collision = true
 size = Vector3(1, 0.244, 1.07)
-material = ExtResource("3_nmrga")
+material = ExtResource("4_5yoel")
 
 [node name="MeshInstance3D8" type="CSGBox3D" parent="."]
 transform = Transform3D(7.07029, 0, 0, 0, -0.0148107, -9.07628, 0, 1.062, -0.126578, -5.185, 4.385, 7.345)
-material_override = ExtResource("3_nmrga")
+material_override = ExtResource("4_5yoel")
 use_collision = true
 size = Vector3(1, 0.244, 1)
-material = ExtResource("3_nmrga")
+material = ExtResource("4_5yoel")
 
 [node name="MeshInstance3D12" type="CSGBox3D" parent="."]
 transform = Transform3D(7.07029, 0, 0, 0, -0.0148107, -9.07628, 0, 1.062, -0.126578, 7.04691, 4.38505, 7.34047)
-material_override = ExtResource("3_nmrga")
+material_override = ExtResource("4_5yoel")
 use_collision = true
 size = Vector3(1, 0.244, 1)
-material = ExtResource("3_nmrga")
+material = ExtResource("4_5yoel")
 
 [node name="MeshInstance3D9" type="CSGBox3D" parent="."]
 transform = Transform3D(2.77986, 0, 0, 0, -0.0148107, -9.07628, 0, 1.062, -0.126578, 0.848, 2.716, 7.321)
-material_override = ExtResource("3_nmrga")
+material_override = ExtResource("4_5yoel")
 use_collision = true
 size = Vector3(1, 0.244, 1)
-material = ExtResource("3_nmrga")
+material = ExtResource("4_5yoel")
 
 [node name="MeshInstance3D10" type="CSGBox3D" parent="."]
 transform = Transform3D(18.9343, 0, 0, 0, -0.014652, -2.10346, 0, 1.05062, -0.0293348, 1.8781, -0.367618, 7.27673)
 material_override = SubResource("StandardMaterial3D_vdprf")
 use_collision = true
 size = Vector3(1, 0.244, 1.07)
-material = ExtResource("3_nmrga")
+material = ExtResource("4_5yoel")
 
 [node name="MeshInstance3D11" type="CSGBox3D" parent="."]
 transform = Transform3D(18.5086, 0, 0, 0, -0.0146741, -3.0739, 0, 1.05221, -0.0428687, 1.938, 3.431, 7.33)
-material_override = ExtResource("3_nmrga")
+material_override = ExtResource("4_5yoel")
 use_collision = true
 size = Vector3(1, 0.244, 1.07)
-material = ExtResource("3_nmrga")
+material = ExtResource("4_5yoel")
 
 [node name="MeshInstance3D6" type="CSGBox3D" parent="."]
 transform = Transform3D(9.06044, 0, 0, 0, -0.0145833, -4.28189, 0, 1.04567, -0.0597165, 1.97018, 4.40554, -7.58611)
-material_override = ExtResource("3_nmrga")
+material_override = ExtResource("4_5yoel")
 use_collision = true
 size = Vector3(1.315, 0.244, 2.089)
-material = ExtResource("3_nmrga")
+material = ExtResource("4_5yoel")
 
 [node name="MeshInstance3D2" type="CSGBox3D" parent="."]
 transform = Transform3D(-0.00223424, -1.06225, 0.12793, -0.0226415, -0.0148313, -9.16236, 13.0948, -0.000206884, -0.0158202, 4.85713, 4.25276, 0.869692)
-material_override = ExtResource("3_nmrga")
+material_override = ExtResource("4_5yoel")
 use_collision = true
 size = Vector3(1, 0.244, 1)
-material = ExtResource("3_nmrga")
+material = ExtResource("4_5yoel")
 
 [node name="MeshInstance3D3" type="CSGBox3D" parent="."]
 transform = Transform3D(-3.96045e-07, 1.04578, -1.87186e-07, 0, -4.57124e-08, -4.28231, -9.06045, -4.57124e-08, 8.18215e-15, -2.31304, 4.07687, 0.195121)
-material_override = ExtResource("3_nmrga")
+material_override = ExtResource("4_5yoel")
 use_collision = true
 size = Vector3(1.587, 0.244, 2.159)
-material = ExtResource("3_nmrga")
+material = ExtResource("4_5yoel")
 
 [node name="CSGMesh3D2" type="CSGMesh3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -0.0139447, -0.999903, 0, 0.999903, -0.0139447, 0, 2.32522, 0)
@@ -131,15 +131,15 @@ use_collision = true
 
 [node name="CSGMesh3D" type="CSGMesh3D" parent="."]
 transform = Transform3D(14.1195, 0, 0, 0, 1, 0, 0, 0, 14.0821, 1.34417, 0, -6.03147)
-material_override = ExtResource("3_488up")
+material_override = ExtResource("5_d56fa")
 use_collision = true
 mesh = SubResource("PlaneMesh_ao1kd")
-material = ExtResource("3_488up")
+material = ExtResource("5_d56fa")
 
-[node name="Victorian Bed" parent="." instance=ExtResource("5_rna0y")]
+[node name="Victorian Bed" parent="." instance=ExtResource("6_4p17t")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.617049, 0, -0.429184)
 
-[node name="Bedlamp" parent="." instance=ExtResource("7_2f51s")]
+[node name="Bedlamp" parent="." instance=ExtResource("7_cygen")]
 transform = Transform3D(1.75, 0, 0, 0, 1.75, 0, 0, 0, 1.75, -1.86536, 1.03157, 1.41966)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Bedlamp"]
@@ -150,16 +150,16 @@ light_volumetric_fog_energy = 3.449
 light_size = 0.071
 omni_range = 5.59839
 
-[node name="wooden table2" parent="." instance=ExtResource("8_14dbt")]
+[node name="wooden table2" parent="." instance=ExtResource("8_r3uuf")]
 transform = Transform3D(-5.46392e-08, 0, 1.25, 0, 1.25, 0, -1.25, 0, -5.46392e-08, -2.11088, 0, 1.44517)
 
-[node name="ДИВАН_Sofa_3" parent="." instance=ExtResource("8_43ql1")]
+[node name="ДИВАН_Sofa_3" parent="." instance=ExtResource("9_5c6kt")]
 transform = Transform3D(-3.49691e-08, 0, -0.8, 0, 0.8, 0, 0.8, 0, -3.49691e-08, 3.94098, 0, 3.30455)
 
-[node name="Table_round" parent="." instance=ExtResource("9_jtb8i")]
+[node name="Table_round" parent="." instance=ExtResource("10_1n6i0")]
 transform = Transform3D(1.25, 0, 0, 0, 1.25, 0, 0, 0, 1.25, 3.99987, 0, 1.23256)
 
-[node name="Bedlamp2" parent="." instance=ExtResource("7_2f51s")]
+[node name="Bedlamp2" parent="." instance=ExtResource("7_cygen")]
 transform = Transform3D(1.75, 0, 0, 0, 1.75, 0, 0, 0, 1.75, 4.32092, 0.983071, 1.47502)
 
 [node name="OmniLight3D2" type="OmniLight3D" parent="Bedlamp2"]
@@ -170,8 +170,8 @@ light_volumetric_fog_energy = 3.449
 light_size = 0.071
 omni_range = 5.59839
 
-[node name="Gun Pickup" parent="." instance=ExtResource("11_byqd4")]
+[node name="Gun Pickup" parent="." instance=ExtResource("11_wfn6d")]
 transform = Transform3D(0.00167811, -0.149991, -1.06167e-10, 0.139957, 0.00156585, -0.0539409, 0.0539375, 0.000603458, 0.139966, 1.06625, 0.685704, 6.83331)
 
-[node name="single_page" parent="." instance=ExtResource("12_cgvk0")]
+[node name="single_page" parent="." instance=ExtResource("12_6e7i5")]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 3.77153, 1.04163, 1.08291)

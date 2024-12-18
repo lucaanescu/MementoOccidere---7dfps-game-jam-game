@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://0klveol3jk3l"
-path="res://.godot/imported/Reticle_no_gun.png-11d0870c4b7cad7a6fb229a7a1931424.ctex"
+path="res://.godot/imported/Reticle_no_gun.png-74d39c68363dfb9f1b1d3bea13c80838.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Reticle_no_gun.png"
-dest_files=["res://.godot/imported/Reticle_no_gun.png-11d0870c4b7cad7a6fb229a7a1931424.ctex"]
+source_file="res://Icons/Reticle_no_gun.png"
+dest_files=["res://.godot/imported/Reticle_no_gun.png-74d39c68363dfb9f1b1d3bea13c80838.ctex"]
 
 [params]
 

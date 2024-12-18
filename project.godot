@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="Memento Occidere"
-run/main_scene="res://First_room.tscn"
+run/main_scene="res://Scenes/First_room.tscn"
 config/features=PackedStringArray("4.3")
 config/icon="res://icon.svg"
+
+[autoload]
+
+Text="*res://Scripts/Text.gd"
 
 [filesystem]
 

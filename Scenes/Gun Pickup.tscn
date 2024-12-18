@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://7q2eb5c55x86"]
 
 [ext_resource type="PackedScene" uid="uid://dofr238trwfbr" path="res://Gun parts/rifle2.fbx" id="1_2yhsy"]
-[ext_resource type="Script" path="res://gun_pickup_script.gd" id="1_bbm8b"]
+[ext_resource type="Script" path="res://Sounds/gun_pickup_script.gd" id="1_bbm8b"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_hgon5"]
 size = Vector3(11.0055, 2.61712, 1.30079)
