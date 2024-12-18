@@ -1,5 +1,8 @@
 extends CharacterBody3D
 
+# For dialogue later, this is an empty string
+var dialog_key = ""
+
 # setting up the fact that camera 3D is a variable that can exist in the world
 var _camera : Camera3D
 # declaring a variable for if the player is using a controler and a vector2 also audio
@@ -52,6 +55,16 @@ func _input(event):
 		_camera.rotation.x = clamp(_camera.rotation.x,deg_to_rad(-89),deg_to_rad(89))
 		# Ok degree to radians is actually good
 		
+		
+func _interact():
+	Reach = get_node("Camera3d/Reach")
+	
+	if Reach.is_colliding():
+		var hit = Reach.get_collider()
+		
+		if hit.get_name() == "Note":
+			Text.emit_signal("display_dialog", dialog_key)
+	
 # This code just plays sounds
 func _play_sound():
 	Footsteps = get_node("Sounds/Walk")
@@ -110,6 +123,7 @@ func _physics_process(delta):
 	
 	if Input.is_action_just_pressed("Use"):
 		_pick_up_gun()
+		_interact()
 	
 	# Get the input direction and handle the movement/deceleration.
 	var input_dir = Input.get_vector("Left", "Right", "Forward", "Backward")
