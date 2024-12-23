@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://bddroqhpvhfxl"]
+[gd_scene load_steps=21 format=3 uid="uid://bddroqhpvhfxl"]
 
 [ext_resource type="Texture2D" uid="uid://ygs2lx25hasn" path="res://Room parts/steven-c-skydome-render.jpg" id="1_fif3h"]
 [ext_resource type="PackedScene" uid="uid://ctjx0tjkd2gw7" path="res://Scenes/Player.tscn" id="2_fnn4v"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://dqbxu6nwqifm1" path="res://Room parts/table_round_obj.tscn" id="10_1n6i0"]
 [ext_resource type="PackedScene" uid="uid://7q2eb5c55x86" path="res://Scenes/Gun Pickup.tscn" id="11_wfn6d"]
 [ext_resource type="PackedScene" uid="uid://b3wqpd6prosgf" path="res://Scenes/single_page.fbx" id="12_6e7i5"]
+[ext_resource type="PackedScene" uid="uid://7aogr6gpi2ik" path="res://Interaction_object.tscn" id="13_kc374"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_6jx5a"]
 panorama = ExtResource("1_fif3h")
@@ -175,3 +176,9 @@ transform = Transform3D(0.00167811, -0.149991, -1.06167e-10, 0.139957, 0.0015658
 
 [node name="single_page" parent="." instance=ExtResource("12_6e7i5")]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 3.77153, 1.04163, 1.08291)
+
+[node name="Readable_note" parent="." instance=ExtResource("13_kc374")]
+transform = Transform3D(0.543687, 0, 0, 0, 0.134987, 0, 0, 0, 0.524736, 3.82099, 0.999443, 1.09114)
+dialog_key = "Note"
+
+[editable path="Readable_note"]

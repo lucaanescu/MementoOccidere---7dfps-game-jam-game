@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://be8b0whtt46ye"]
 
-[ext_resource type="Script" path="res://Scenes/Description.gd" id="1_6w2wa"]
+[ext_resource type="Script" path="res://Scenes/speech.gd" id="1_ubsui"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4m54l"]
 bg_color = Color(0, 0, 0, 0.490196)
@@ -19,7 +19,7 @@ cache/0/16/0/scale = 1.0
 
 [node name="Textbox" type="CanvasLayer"]
 process_mode = 3
-script = ExtResource("1_6w2wa")
+script = ExtResource("1_ubsui")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 custom_minimum_size = Vector2(0.5, 200)

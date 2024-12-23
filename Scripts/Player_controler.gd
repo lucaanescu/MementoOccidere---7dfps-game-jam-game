@@ -62,8 +62,6 @@ func _interact():
 	if Reach.is_colliding():
 		var hit = Reach.get_collider()
 		
-		if hit.get_name() == "Note":
-			Text.emit_signal("display_dialog", dialog_key)
 	
 # This code just plays sounds
 func _play_sound():
