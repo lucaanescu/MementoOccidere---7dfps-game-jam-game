@@ -3,6 +3,8 @@ extends CharacterBody3D
 # For dialogue later, this is an empty string
 var dialog_key = ""
 
+var current_object
+
 # setting up the fact that camera 3D is a variable that can exist in the world
 var _camera : Camera3D
 # declaring a variable for if the player is using a controler and a vector2 also audio
@@ -61,7 +63,12 @@ func _interact():
 	
 	if Reach.is_colliding():
 		var hit = Reach.get_collider()
-		
+		if hit == null or !hit.get_parent().has_method("_on_static_body_3d_mouse_entered"):
+			if current_object != null and current_object.get_parent().has_method("_on_static_body_3d_mouse_exited"):
+				current_object.get_parent()._on_static_body_3d_mouse_exited()
+		else:
+			hit.get_parent()._on_static_body_3d_mouse_entered()
+			current_object = hit
 	
 # This code just plays sounds
 func _play_sound():
@@ -112,7 +119,7 @@ func _Controler_controls():
 func _physics_process(delta):
 	
 	_Controler_controls()
-	
+	_interact()
 	_sprinting()
 	
 	# Add the gravity.
@@ -121,7 +128,6 @@ func _physics_process(delta):
 	
 	if Input.is_action_just_pressed("Use"):
 		_pick_up_gun()
-		_interact()
 	
 	# Get the input direction and handle the movement/deceleration.
 	var input_dir = Input.get_vector("Left", "Right", "Forward", "Backward")
