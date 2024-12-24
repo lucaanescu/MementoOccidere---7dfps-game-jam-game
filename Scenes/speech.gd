@@ -9,19 +9,21 @@ var scene_text = {}
 var selected_text = []
 var in_progress = false
 
+var json = JSON.new()
+
 @onready var background = $Textbox
 @onready var text_label = $Dialogue
 
 func _ready():
 	background.visible = false
 	scene_text = load_scene_text()
-	Text.connect("display_dialog",self, "on_display_dialog")
+	Text.connect(background, text_label)
 	
 func load_scene_text():
-	var file = FileAccess.new()
+	var file = FileAccess
 	if file.file_exists(Scene_text_file):
-		file.open(Scene_text_file, FileAccess.READ)
-		return JSON.parse(file.get_as_text())
+		var json_acc = file.open(Scene_text_file, FileAccess.READ)
+		return json.parse(json_acc.get_as_text())
 		
 func show_text():
 	text_label.text = selected_text.pop_front()
