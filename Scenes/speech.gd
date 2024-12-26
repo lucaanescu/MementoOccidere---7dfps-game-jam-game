@@ -47,14 +47,13 @@ func finish():
 func _process(delta):
 	if in_progress and Input.is_action_just_pressed("Use"):
 		next_line()
+		print("im reading the game")
 
 func on_display_dialog(text_key):
-	if in_progress:
-		next_line()
-	else:
-		get_tree().paused = true
-		background.visible = true
-		in_progress = true
-		selected_text = scene_text[text_key].duplicate()
-		show_text()
+	get_tree().paused = true
+	background.visible = true
+	in_progress = true
+	selected_text = scene_text[text_key].duplicate()
+	show_text()
+	print("I made some text")
 	

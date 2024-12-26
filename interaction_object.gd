@@ -14,3 +14,11 @@ func _on_static_body_3d_mouse_entered() -> void:
 
 func _on_static_body_3d_mouse_exited() -> void:
 	area_active = false
+
+
+func _on_static_body_3d_2_mouse_entered() -> void:
+	area_active = true
+
+
+func _on_static_body_3d_2_mouse_exited() -> void:
+	area_active = false
