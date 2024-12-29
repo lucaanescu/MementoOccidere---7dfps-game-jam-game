@@ -65,18 +65,18 @@ func _interact():
 	#something needs to change here but i need to mess around with it more to realize what to fix the bugs that involve lingering text id
 	if Reach.is_colliding():
 		var hit = Reach.get_collider()
-		print(hit)
+		print(hit.get_parent())
 		
 		if hit == null or !hit.get_parent().has_method("_on_static_body_3d_mouse_entered"):
-			print("hit")
+			
 			if hit != null and hit.get_parent().has_method("_on_static_body_3d_mouse_exited"):
 				hit.get_parent()._on_static_body_3d_mouse_exited()
+				
 				if hit == null:
 					hit.get_parent()._on_static_body_3d_mouse_exited()
-					print("hit")
+					
 		else:
 			hit.get_parent()._on_static_body_3d_mouse_entered()
-			print(hit)
 	
 # This code just plays sounds
 func _play_sound():
