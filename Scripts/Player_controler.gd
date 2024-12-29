@@ -126,16 +126,17 @@ func _Controler_controls():
 
 func _physics_process(delta):
 	
+	if Input.is_action_just_pressed("Use"):
+		_pick_up_gun()
+	
 	_Controler_controls()
-	_interact()
 	_sprinting()
+	_interact()
 	
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y -= gravity * delta
-	
-	if Input.is_action_just_pressed("Use"):
-		_pick_up_gun()
+
 	
 	# Get the input direction and handle the movement/deceleration.
 	var input_dir = Input.get_vector("Left", "Right", "Forward", "Backward")
