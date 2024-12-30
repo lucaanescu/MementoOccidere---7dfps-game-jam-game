@@ -9,7 +9,6 @@ var in_progress = false
 
 var json = JSON.new()
 
-@onready var Player = load("res://Scenes/Player.tscn")
 @onready var background = self
 @onready var text_label = $MarginContainer/MarginContainer/HBoxContainer/Dialogue
 
