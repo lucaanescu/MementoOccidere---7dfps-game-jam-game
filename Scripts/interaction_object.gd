@@ -1,5 +1,7 @@
 extends Node3D
 
+#really all this code is here for is to set the 'ive entered a reading prompt' as true or false if they have a dialogue key
+#it exists on a few interactable boxes
 @export var dialog_key : String
 @export var area_active = false
 

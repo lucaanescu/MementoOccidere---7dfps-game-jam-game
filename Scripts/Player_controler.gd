@@ -38,6 +38,7 @@ func _pick_up_gun():
 	gun = get_node("Camera3d/rifle3")
 	cocking = get_node("Sounds/Gun loading")
 	
+#This just checks for the gun if in range with the collider and perform all the gun 'pickup' actions
 	if Reach.is_colliding():
 		
 		var hit = Reach.get_collider()
@@ -53,35 +54,35 @@ func _input(event):
 	_camera = get_node("Camera3d")
 	
 	if event is InputEventMouseMotion:
-		# Actually selecting the variable for the camera in the tree while the game runs
+# Actually selecting the variable for the camera in the tree while the game runs
 		rotate_y(deg_to_rad(event.relative.x * -mouse_sense))
 		_camera.rotate_x(deg_to_rad(event.relative.y * -mouse_sense))
 		_camera.rotation.x = clamp(_camera.rotation.x,deg_to_rad(-89),deg_to_rad(89))
-		# Ok degree to radians is actually good
+# Ok degree to radians is actually good
 		
 		
 func _interact():
 	Reach = get_node("Camera3d/Reach")
 	var hit = Reach.get_collider()
 	
-	#checks if it hits anything
+#checks if it hits anything
 	if Reach.is_colliding():
 		
-		#checks if hit is null or doesnt get an object with the method "_on static body 3d"
+#checks if hit is null or doesnt get an object with the method "_on static body 3d"
 		
 		if hit == null or !hit.get_parent().has_method("_on_static_body_3d_mouse_entered"):
-			#checks if hit is not null or doesnt get an object with the method "_on static body 3d"
-			#this is so that it can claim it left the detection zone so that it could pick up the gun
+#checks if hit is not null or doesnt get an object with the method "_on static body 3d"
+#this is so that it can claim it left the detection zone so that it could pick up the gun
 			
 			if hit != null and !hit.get_parent().has_method("_on_static_body_3d_mouse_exited"):
 				hit.get_parent()._on_static_body_3d_mouse_exited()
 				
-		#if it hit anything that has those values (isnt null and has enter or exit method) it activates get parent entered and starts the chain reaction to open the dialogue box
-		#also saves the hit values to no_hit a global variable that can get called later
+#if it hit anything that has those values (isnt null and has enter or exit method) it activates get parent entered and starts the chain reaction to open the dialogue box
+#also saves the hit values to no_hit a global variable that can get called later
 		else:
 			hit.get_parent()._on_static_body_3d_mouse_entered()
 			_noHit = hit
-			#if nohit is stored as anything then it is called and it gets the exit function of the interact script then sets itself back to null
+#if nohit is stored as anything then it is called and it gets the exit function of the interact script then sets itself back to null
 	else:
 		if _noHit != null :
 			_noHit.get_parent()._on_static_body_3d_mouse_exited()
@@ -110,7 +111,7 @@ func _walking_sfx(start = true):
 	
 # For running
 func _sprinting():
-		# Some very basic running mechanics
+# Some very basic running mechanics, all it does is call the game objects and change them to a faster speed before changing them back
 	foot_timer = get_node("Sounds/Timer")
 	if Input.is_action_pressed("Sprint"):
 		SPEED = Sprinting
@@ -143,15 +144,15 @@ func _physics_process(delta):
 	_sprinting()
 	_interact()
 	
-	# Add the gravity.
+# Add the gravity.
 	if not is_on_floor():
 		velocity.y -= gravity * delta
 
 	
-	# Get the input direction and handle the movement/deceleration.
+# Get the input direction and handle the movement/deceleration.
 	var input_dir = Input.get_vector("Left", "Right", "Forward", "Backward")
 	
-	# I dont remember exactly why direction doesn't have to specify that it doesn't equal Vector3.Zero but I sure am glad it doesn't! Makes my life easyer
+# I dont remember exactly why direction doesn't have to specify that it doesn't equal Vector3.Zero but I sure am glad it doesn't! Makes my life easyer
 	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	if direction:
 		velocity.x = direction.x * SPEED
