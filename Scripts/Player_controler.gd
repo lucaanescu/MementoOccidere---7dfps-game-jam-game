@@ -21,6 +21,7 @@ var Sprinting = 5
 const mouse_sense = 0.1
 const mouse_sense_pad = 5
 var mouse_dead = 0.3
+var _noHit
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
@@ -61,22 +62,31 @@ func _input(event):
 		
 func _interact():
 	Reach = get_node("Camera3d/Reach")
+	var hit = Reach.get_collider()
 	
-	#something needs to change here but i need to mess around with it more to realize what to fix the bugs that involve lingering text id
+	#checks if it hits anything
 	if Reach.is_colliding():
-		var hit = Reach.get_collider()
-		print(hit.get_parent())
+		
+		#checks if hit is null or doesnt get an object with the method "_on static body 3d"
 		
 		if hit == null or !hit.get_parent().has_method("_on_static_body_3d_mouse_entered"):
+			#checks if hit is not null or doesnt get an object with the method "_on static body 3d"
+			#this is so that it can claim it left the detection zone so that it could pick up the gun
 			
-			if hit != null and hit.get_parent().has_method("_on_static_body_3d_mouse_exited"):
+			if hit != null and !hit.get_parent().has_method("_on_static_body_3d_mouse_exited"):
 				hit.get_parent()._on_static_body_3d_mouse_exited()
 				
-				if hit == null:
-					hit.get_parent()._on_static_body_3d_mouse_exited()
-					
+		#if it hit anything that has those values (isnt null and has enter or exit method) it activates get parent entered and starts the chain reaction to open the dialogue box
+		#also saves the hit values to no_hit a global variable that can get called later
 		else:
 			hit.get_parent()._on_static_body_3d_mouse_entered()
+			_noHit = hit
+			#if nohit is stored as anything then it is called and it gets the exit function of the interact script then sets itself back to null
+	else:
+		if _noHit != null :
+			_noHit.get_parent()._on_static_body_3d_mouse_exited()
+			_noHit = null
+		
 	
 # This code just plays sounds
 func _play_sound():

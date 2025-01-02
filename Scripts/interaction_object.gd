@@ -1,7 +1,7 @@
 extends Node3D
 
 @export var dialog_key : String
-var area_active = false
+@export var area_active = false
 
 func _input(event):
 	if area_active == true and event.is_action_pressed("Use"):

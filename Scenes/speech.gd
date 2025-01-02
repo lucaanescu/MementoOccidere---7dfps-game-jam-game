@@ -22,10 +22,8 @@ func load_scene_text():
 	if FileAccess.file_exists(scene_text_file):
 		var json_acc = FileAccess.open(scene_text_file, FileAccess.READ)
 		if json.parse(json_acc.get_as_text()) != OK:
-			printerr("unable to parse json")
+			print("unable to parse json")
 		return json.data
-	else:
-		printerr("Can't load", scene_text_file)
 		
 func show_text():
 	text_label.text = selected_text.pop_front()
