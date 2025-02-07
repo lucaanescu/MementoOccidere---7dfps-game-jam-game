@@ -11,6 +11,9 @@ border_width_bottom = 2
 border_color = Color(0.996078, 0.921569, 0.929412, 0.784314)
 
 [sub_resource type="FontFile" id="FontFile_woc2k"]
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
 cache/0/16/0/ascent = 0.0
 cache/0/16/0/descent = 0.0
 cache/0/16/0/underline_position = 0.0

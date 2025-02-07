@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://bddroqhpvhfxl"]
+[gd_scene load_steps=27 format=3 uid="uid://bddroqhpvhfxl"]
 
 [ext_resource type="Texture2D" uid="uid://ygs2lx25hasn" path="res://Room parts/steven-c-skydome-render.jpg" id="1_fif3h"]
 [ext_resource type="PackedScene" uid="uid://ctjx0tjkd2gw7" path="res://Scenes/Player.tscn" id="2_fnn4v"]
@@ -16,6 +16,8 @@
 [ext_resource type="PackedScene" uid="uid://be8b0whtt46ye" path="res://Scenes/Speech.tscn" id="14_7ntww"]
 [ext_resource type="PackedScene" uid="uid://csdpjhb510ffu" path="res://Scenes/building3.fbx" id="15_fa0u1"]
 [ext_resource type="PackedScene" uid="uid://56vk2slb5lqb" path="res://AssembledExportForJon.fbx" id="16_gippd"]
+[ext_resource type="PackedScene" uid="uid://xq0i36jxr4qd" path="res://Lamp.fbx" id="17_qhl2l"]
+[ext_resource type="PackedScene" uid="uid://dpk00w6ov3sjv" path="res://Merchants_Market_Tavern.fbx" id="18_u4jq5"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_6jx5a"]
 panorama = ExtResource("1_fif3h")
@@ -200,5 +202,11 @@ transform = Transform3D(7.68697, 0, -2.21597, 0, 8, 0, 2.21597, 0, 7.68697, -15.
 
 [node name="AssembledExportForJon" parent="." instance=ExtResource("16_gippd")]
 transform = Transform3D(0.927079, 0, 0.374866, 0, 1, 0, -0.374866, 0, 0.927079, 2.62959, -5.99093, 58.6057)
+
+[node name="Lamp" parent="." instance=ExtResource("17_qhl2l")]
+transform = Transform3D(0.28, 0, 0, 0, 0.28, 0, 0, 0, 0.28, -7.2154, -6.1121, 38.1522)
+
+[node name="Merchants_Market_Tavern" parent="." instance=ExtResource("18_u4jq5")]
+transform = Transform3D(-0.99103, 0, -0.13364, 0, 1, 0, 0.13364, 0, -0.99103, 2.70807, -5.91485, 46.5397)
 
 [editable path="Readable_note"]
