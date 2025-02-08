@@ -5,7 +5,7 @@ var dialog_key = ""
 
 var current_object
 
-# setting up the fact that camera 3D is a variable that can exist in the world
+# setting up the fact that camera 3D is a variable that can exist in the world, but also the fov of the camera 
 var _camera : Camera3D
 # declaring a variable for if the player is using a controler and a vector2 also audio
 var look_delta : Vector2
@@ -16,12 +16,17 @@ var Reach : RayCast3D
 var gun : Node3D
 
 #Base values of the game that will change around
+var gun_is_active = false
+var _is_camera_scoped = false
 var SPEED = 3
 var Sprinting = 5
 const mouse_sense = 0.1
 const mouse_sense_pad = 5
 var mouse_dead = 0.3
 var _noHit
+var _zoom_fov = 30.0
+var _default_fov = 75.0
+var _zoom_speed = 4.0
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
@@ -71,9 +76,11 @@ func _interact():
 #checks if hit is null or doesnt get an object with the method "_on static body 3d"
 		
 		if hit == null or !hit.get_parent().has_method("_on_static_body_3d_mouse_entered"):
+			gun_is_active = true
 #checks if hit is not null or doesnt get an object with the method "_on static body 3d"
 #this is so that it can claim it left the detection zone so that it could pick up the gun
 			
+#if it hits something but also doesnt have the exit function of the parent then hit is set to exiting the hit item as if it hits nothing
 			if hit != null and !hit.get_parent().has_method("_on_static_body_3d_mouse_exited"):
 				hit.get_parent()._on_static_body_3d_mouse_exited()
 				
@@ -88,6 +95,16 @@ func _interact():
 			_noHit.get_parent()._on_static_body_3d_mouse_exited()
 			_noHit = null
 		
+#code for the gun scope
+func _gun_controls_zoom():
+	_camera = get_node("Camera3d")
+	var fov_camera : float = _camera.fov
+#calls two camera variables and makes two if statements, if the camera is zoomed in then it performs the lerp zoom at a max length
+	if _is_camera_scoped == true:
+		_camera.set_fov(lerp(_camera.fov, _zoom_fov, get_process_delta_time() * _zoom_speed))
+#if the camera is not zoomed then it goes back to default field of vision
+	if _is_camera_scoped == false:
+		_camera.set_fov(lerp(_camera.fov, _default_fov, get_process_delta_time() * _zoom_speed))
 	
 # This code just plays sounds
 func _play_sound():
@@ -135,11 +152,18 @@ func _Controler_controls():
 		_camera.rotate_x(deg_to_rad(x * -mouse_sense_pad))
 		_camera.rotation.x = clamp(_camera.rotation.x,deg_to_rad(-79),deg_to_rad(79))
 
-func _physics_process(delta):
+func _physics_process(delta):	
 	
-	if Input.is_action_just_pressed("Use"):
+	if Input.is_action_just_pressed("Use") and gun_is_active == false:
 		_pick_up_gun()
 	
+#checks if the player has the gun and if they are scoped or not. The zoom function is always being called but just stoped by a bunch of bools
+	if Input.is_action_pressed("Scope") and gun_is_active == true:
+		_is_camera_scoped = true
+	else:
+		_is_camera_scoped = false
+	
+	_gun_controls_zoom()
 	_Controler_controls()
 	_sprinting()
 	_interact()

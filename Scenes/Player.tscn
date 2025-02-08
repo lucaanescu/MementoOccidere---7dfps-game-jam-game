@@ -23,7 +23,6 @@ shape = SubResource("CapsuleShape3D_phyot")
 [node name="Camera3d" type="Camera3D" parent="."]
 transform = Transform3D(0.02, 0, 0, 0, 0.019263, 0, 0, 0, 0.0174474, 0, 0.0088272, 0)
 current = true
-fov = 83.5
 near = 0.042
 
 [node name="rifle3" parent="Camera3d" instance=ExtResource("2_mcrg4")]
