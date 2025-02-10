@@ -24,7 +24,7 @@ const mouse_sense = 0.1
 const mouse_sense_pad = 5
 var mouse_dead = 0.3
 var _noHit
-var _zoom_fov = 30.0
+var _zoom_fov = 20.0
 var _default_fov = 75.0
 var _zoom_speed = 4.0
 
@@ -65,6 +65,9 @@ func _input(event):
 		_camera.rotation.x = clamp(_camera.rotation.x,deg_to_rad(-89),deg_to_rad(89))
 # Ok degree to radians is actually good
 		
+#opens up the menu if you're in the middle of the game
+func _open_menu():
+	pass
 		
 func _interact():
 	Reach = get_node("Camera3d/Reach")
