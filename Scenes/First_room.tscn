@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://bddroqhpvhfxl"]
+[gd_scene load_steps=28 format=3 uid="uid://bddroqhpvhfxl"]
 
 [ext_resource type="Texture2D" uid="uid://ygs2lx25hasn" path="res://Room parts/steven-c-skydome-render.jpg" id="1_fif3h"]
 [ext_resource type="PackedScene" uid="uid://ctjx0tjkd2gw7" path="res://Scenes/Player.tscn" id="2_fnn4v"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://7q2eb5c55x86" path="res://Scenes/Gun Pickup.tscn" id="11_wfn6d"]
 [ext_resource type="PackedScene" uid="uid://b3wqpd6prosgf" path="res://Scenes/single_page.fbx" id="12_6e7i5"]
 [ext_resource type="PackedScene" uid="uid://7aogr6gpi2ik" path="res://Interaction_object.tscn" id="13_kc374"]
+[ext_resource type="PackedScene" uid="uid://ntv54ebfwy3h" path="res://Scenes/Pause_menu.tscn" id="14_1bnym"]
 [ext_resource type="PackedScene" uid="uid://be8b0whtt46ye" path="res://Scenes/Speech.tscn" id="14_7ntww"]
 [ext_resource type="PackedScene" uid="uid://csdpjhb510ffu" path="res://Scenes/building3.fbx" id="15_fa0u1"]
 [ext_resource type="PackedScene" uid="uid://56vk2slb5lqb" path="res://AssembledExportForJon.fbx" id="16_gippd"]
@@ -196,6 +197,8 @@ dialog_key = "Note"
 collision_layer = 2
 
 [node name="Textbox" parent="." instance=ExtResource("14_7ntww")]
+
+[node name="Pause_menu" parent="." instance=ExtResource("14_1bnym")]
 
 [node name="building3" parent="." instance=ExtResource("15_fa0u1")]
 transform = Transform3D(7.68697, 0, -2.21597, 0, 8, 0, 2.21597, 0, 7.68697, -15.8671, -2.71869, 74.3603)

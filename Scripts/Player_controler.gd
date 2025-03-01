@@ -47,7 +47,6 @@ func _pick_up_gun():
 	if Reach.is_colliding():
 		
 		var hit = Reach.get_collider()
-		print(hit)
 		
 		if hit.get_name() == "Gun_body":
 			hit.free()
@@ -66,8 +65,6 @@ func _input(event):
 # Ok degree to radians is actually good
 		
 #opens up the menu if you're in the middle of the game
-func _open_menu():
-	pass
 		
 func _interact():
 	Reach = get_node("Camera3d/Reach")

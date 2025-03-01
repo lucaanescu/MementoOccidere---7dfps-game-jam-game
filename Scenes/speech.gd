@@ -17,7 +17,6 @@ func _ready():
 	scene_text = load_scene_text()
 	Text.connect("display_dialog", on_display_dialog)
 	
-	
 func load_scene_text():
 	if FileAccess.file_exists(scene_text_file):
 		var json_acc = FileAccess.open(scene_text_file, FileAccess.READ)
