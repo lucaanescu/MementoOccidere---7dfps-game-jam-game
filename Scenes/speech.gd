@@ -13,6 +13,7 @@ var json = JSON.new()
 @onready var text_label = $MarginContainer/MarginContainer/HBoxContainer/Dialogue
 
 func _ready():
+	$AnimationPlayer.play("RESET")
 	background.visible = false
 	scene_text = load_scene_text()
 	Text.connect("display_dialog", on_display_dialog)
@@ -35,6 +36,7 @@ func next_line():
 		finish()
 
 func finish():
+	$AnimationPlayer.play_backwards("Fade")
 	text_label.text = ""
 	background.visible = false
 	in_progress = false
@@ -45,6 +47,7 @@ func _process(delta):
 		next_line()
 
 func on_display_dialog(text_key):
+	$AnimationPlayer.play("Fade")
 	get_tree().paused = true
 	background.visible = true
 	in_progress = true
