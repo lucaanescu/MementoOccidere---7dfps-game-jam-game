@@ -61,11 +61,13 @@ func _on_options_pressed():
 	
 func _on_quit_pressed():
 	$MarginContainer2.visible = true
+	$MarginContainer2/Panel/MarginContainer/VBoxContainer/Yes.grab_focus()
 	
 #By default the yes and no option are invisible and once active they can be pressed to either resume the game or quit it.
 
 func _on_no_pressed() -> void:
 	$MarginContainer2.visible = false
+	$MarginContainer/MarginContainer/VBoxContainer/Resume.grab_focus()
 	
 func _on_yes_pressed() -> void:
 	get_tree().quit()
