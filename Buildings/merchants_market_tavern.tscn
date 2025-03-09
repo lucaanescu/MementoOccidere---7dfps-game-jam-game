@@ -1,5 +1,647 @@
-[gd_scene load_steps=2 format=3 uid="uid://dol6g770whd5d"]
+[gd_scene load_steps=59 format=3 uid="uid://dol6g770whd5d"]
 
-[ext_resource type="PackedScene" uid="uid://dpk00w6ov3sjv" path="res://Merchants_Market_Tavern.fbx" id="1_w7fkh"]
+[ext_resource type="PackedScene" uid="uid://dpk00w6ov3sjv" path="res://Textures/Market_stall_2/Merchants_Market_Tavern.fbx" id="1_w7fkh"]
+[ext_resource type="Texture2D" uid="uid://boanll5kk8i7b" path="res://Textures/Market_stall_2/Medieval_Market_Crates_BaseColor_With_AO.png" id="2_msdcq"]
+[ext_resource type="Texture2D" uid="uid://dfgqt502sme0h" path="res://Textures/Market_stall_2/Cobblestone_Large_BaseColor_With_AO.png" id="3_7crq3"]
+[ext_resource type="Texture2D" uid="uid://c727gq1y18obt" path="res://Textures/Market_stall_2/Iron_Old_BaseColor_With_AO.png" id="4_whgbu"]
+[ext_resource type="Texture2D" uid="uid://bdyn0fvrhheax" path="res://Textures/Market_stall_2/Iron_Old_Roughness.png" id="5_4n1j8"]
+[ext_resource type="Texture2D" uid="uid://rmlneh2r8i7g" path="res://Textures/Market_stall_2/None_BaseColor_With_AO.png" id="6_106xt"]
+[ext_resource type="Texture2D" uid="uid://c373ja3rthg5a" path="res://Textures/Market_stall_2/Iron_Old_Metallic.png" id="7_qpdsq"]
+[ext_resource type="Texture2D" uid="uid://dg2aroqkef6dn" path="res://Textures/Market_stall_2/shopify_123H_large.jpg" id="8_1a2r0"]
+[ext_resource type="Texture2D" uid="uid://dyt6wspkm5y6r" path="res://Textures/Market_stall_2/Iron_Old_Specular.png" id="9_qq3oe"]
+[ext_resource type="Texture2D" uid="uid://bb750gupabmhm" path="res://Textures/Market_stall_2/Market_Stall_Cloth_BaseColor_With_AO.png" id="10_1ploe"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6l1rc"]
+albedo_texture = ExtResource("2_msdcq")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j75wy"]
+albedo_texture = ExtResource("2_msdcq")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5v5eb"]
+albedo_texture = ExtResource("2_msdcq")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lqgo6"]
+albedo_texture = ExtResource("2_msdcq")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rqwwd"]
+albedo_texture = ExtResource("3_7crq3")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fue1k"]
+albedo_texture = ExtResource("2_msdcq")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jx1kt"]
+albedo_texture = ExtResource("4_whgbu")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a0777"]
+albedo_texture = ExtResource("2_msdcq")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s6tig"]
+albedo_texture = ExtResource("5_4n1j8")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y6nkr"]
+albedo_texture = ExtResource("6_106xt")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b8v6a"]
+albedo_texture = ExtResource("7_qpdsq")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wmhtn"]
+albedo_texture = ExtResource("8_1a2r0")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_myd0j"]
+albedo_texture = ExtResource("2_msdcq")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fdjby"]
+albedo_texture = ExtResource("8_1a2r0")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_njxhs"]
+albedo_texture = ExtResource("2_msdcq")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fxixx"]
+albedo_texture = ExtResource("2_msdcq")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xiw4l"]
+albedo_texture = ExtResource("8_1a2r0")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ynwuc"]
+albedo_texture = ExtResource("2_msdcq")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_31bp4"]
+albedo_texture = ExtResource("8_1a2r0")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nt2ag"]
+albedo_texture = ExtResource("7_qpdsq")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_liu4y"]
+albedo_texture = ExtResource("8_1a2r0")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dlmlo"]
+albedo_texture = ExtResource("2_msdcq")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h2e3y"]
+albedo_texture = ExtResource("8_1a2r0")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6fu6p"]
+albedo_texture = ExtResource("2_msdcq")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_88ann"]
+albedo_texture = ExtResource("8_1a2r0")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0ua0k"]
+albedo_texture = ExtResource("2_msdcq")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jglqq"]
+albedo_texture = ExtResource("6_106xt")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ep1jy"]
+albedo_texture = ExtResource("2_msdcq")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ga5b3"]
+albedo_texture = ExtResource("3_7crq3")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0okv3"]
+albedo_texture = ExtResource("2_msdcq")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l8m2f"]
+albedo_texture = ExtResource("9_qq3oe")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sikcw"]
+albedo_texture = ExtResource("2_msdcq")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l0kw0"]
+albedo_texture = ExtResource("5_4n1j8")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n14vi"]
+albedo_texture = ExtResource("8_1a2r0")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ry770"]
+albedo_texture = ExtResource("2_msdcq")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m2ets"]
+albedo_texture = ExtResource("2_msdcq")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j4dka"]
+albedo_texture = ExtResource("2_msdcq")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wnhu6"]
+albedo_texture = ExtResource("8_1a2r0")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qmxga"]
+albedo_texture = ExtResource("2_msdcq")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7etig"]
+albedo_texture = ExtResource("8_1a2r0")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h5gsf"]
+albedo_texture = ExtResource("5_4n1j8")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7pufn"]
+albedo_texture = ExtResource("2_msdcq")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c8sb8"]
+albedo_texture = ExtResource("8_1a2r0")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g2n45"]
+albedo_texture = ExtResource("7_qpdsq")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fkkmj"]
+albedo_texture = ExtResource("7_qpdsq")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gxna5"]
+albedo_texture = ExtResource("2_msdcq")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8ybhf"]
+albedo_texture = ExtResource("10_1ploe")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p1lfw"]
+albedo_texture = ExtResource("2_msdcq")
 
 [node name="Merchants_Market_Tavern" instance=ExtResource("1_w7fkh")]
+
+[node name="Bar Counter" parent="." index="0"]
+material_override = SubResource("StandardMaterial3D_6l1rc")
+
+[node name="Stool_01" parent="." index="1"]
+material_override = SubResource("StandardMaterial3D_j75wy")
+
+[node name="Stool_005" parent="." index="2"]
+material_override = SubResource("StandardMaterial3D_5v5eb")
+
+[node name="Barrel Table02" parent="." index="3"]
+material_override = SubResource("StandardMaterial3D_lqgo6")
+
+[node name="Barrel Table003" parent="." index="4"]
+material_override = SubResource("StandardMaterial3D_lqgo6")
+
+[node name="Barrel_Holder" parent="." index="5"]
+material_override = SubResource("StandardMaterial3D_lqgo6")
+
+[node name="wall_1" parent="." index="6"]
+material_override = SubResource("StandardMaterial3D_rqwwd")
+
+[node name="wall_002" parent="." index="7"]
+material_override = SubResource("StandardMaterial3D_rqwwd")
+
+[node name="Shelf_Backboard" parent="." index="8"]
+material_override = SubResource("StandardMaterial3D_fue1k")
+
+[node name="Plate" parent="." index="9"]
+material_override = SubResource("StandardMaterial3D_jx1kt")
+
+[node name="Plate001" parent="." index="10"]
+material_override = SubResource("StandardMaterial3D_jx1kt")
+
+[node name="Plate003" parent="." index="11"]
+material_override = SubResource("StandardMaterial3D_jx1kt")
+
+[node name="Plate004" parent="." index="12"]
+material_override = SubResource("StandardMaterial3D_jx1kt")
+
+[node name="Plate005" parent="." index="13"]
+material_override = SubResource("StandardMaterial3D_jx1kt")
+
+[node name="Plate006" parent="." index="14"]
+material_override = SubResource("StandardMaterial3D_jx1kt")
+
+[node name="Plate007" parent="." index="15"]
+material_override = SubResource("StandardMaterial3D_jx1kt")
+
+[node name="Plate008" parent="." index="16"]
+material_override = SubResource("StandardMaterial3D_jx1kt")
+
+[node name="Plate009" parent="." index="17"]
+material_override = SubResource("StandardMaterial3D_jx1kt")
+
+[node name="Plate010" parent="." index="18"]
+material_override = SubResource("StandardMaterial3D_jx1kt")
+
+[node name="Plate011" parent="." index="19"]
+material_override = SubResource("StandardMaterial3D_jx1kt")
+
+[node name="Plate012" parent="." index="20"]
+material_override = SubResource("StandardMaterial3D_jx1kt")
+
+[node name="Plate013" parent="." index="21"]
+material_override = SubResource("StandardMaterial3D_jx1kt")
+
+[node name="Plate014" parent="." index="22"]
+material_override = SubResource("StandardMaterial3D_jx1kt")
+
+[node name="Plate015" parent="." index="23"]
+material_override = SubResource("StandardMaterial3D_jx1kt")
+
+[node name="Plate016" parent="." index="24"]
+material_override = SubResource("StandardMaterial3D_jx1kt")
+
+[node name="Plate017" parent="." index="25"]
+material_override = SubResource("StandardMaterial3D_jx1kt")
+
+[node name="Plate019" parent="." index="26"]
+material_override = SubResource("StandardMaterial3D_jx1kt")
+
+[node name="Plate020" parent="." index="27"]
+material_override = SubResource("StandardMaterial3D_jx1kt")
+
+[node name="Plate021" parent="." index="28"]
+material_override = SubResource("StandardMaterial3D_jx1kt")
+
+[node name="Table_Sitting" parent="." index="29"]
+material_override = SubResource("StandardMaterial3D_a0777")
+
+[node name="Table_Sitting001" parent="." index="30"]
+material_override = SubResource("StandardMaterial3D_a0777")
+
+[node name="Stool_006" parent="." index="31"]
+material_override = SubResource("StandardMaterial3D_a0777")
+
+[node name="Stool_007" parent="." index="32"]
+material_override = SubResource("StandardMaterial3D_a0777")
+
+[node name="Stool_009" parent="." index="33"]
+material_override = SubResource("StandardMaterial3D_a0777")
+
+[node name="Plate022" parent="." index="34"]
+material_override = SubResource("StandardMaterial3D_s6tig")
+
+[node name="Plate023" parent="." index="35"]
+material_override = SubResource("StandardMaterial3D_s6tig")
+
+[node name="Plate024" parent="." index="36"]
+material_override = SubResource("StandardMaterial3D_s6tig")
+
+[node name="Plate025" parent="." index="37"]
+material_override = SubResource("StandardMaterial3D_s6tig")
+
+[node name="Plate026" parent="." index="38"]
+material_override = SubResource("StandardMaterial3D_s6tig")
+
+[node name="Plate027" parent="." index="39"]
+material_override = SubResource("StandardMaterial3D_s6tig")
+
+[node name="Plate028" parent="." index="40"]
+material_override = SubResource("StandardMaterial3D_s6tig")
+
+[node name="Plate029" parent="." index="41"]
+material_override = SubResource("StandardMaterial3D_s6tig")
+
+[node name="Plate030" parent="." index="42"]
+material_override = SubResource("StandardMaterial3D_s6tig")
+
+[node name="Plate031" parent="." index="43"]
+material_override = SubResource("StandardMaterial3D_s6tig")
+
+[node name="Plate032" parent="." index="44"]
+material_override = SubResource("StandardMaterial3D_s6tig")
+
+[node name="Plate033" parent="." index="45"]
+material_override = SubResource("StandardMaterial3D_s6tig")
+
+[node name="Board_Game" parent="." index="46"]
+material_override = SubResource("StandardMaterial3D_y6nkr")
+
+[node name="Plate034" parent="." index="47"]
+material_override = SubResource("StandardMaterial3D_b8v6a")
+
+[node name="Plate035" parent="." index="48"]
+material_override = SubResource("StandardMaterial3D_b8v6a")
+
+[node name="WineBottle_1" parent="." index="49"]
+material_override = SubResource("StandardMaterial3D_wmhtn")
+
+[node name="WineBottle_002" parent="." index="50"]
+material_override = SubResource("StandardMaterial3D_wmhtn")
+
+[node name="WineBottle_003" parent="." index="51"]
+material_override = SubResource("StandardMaterial3D_wmhtn")
+
+[node name="WineBottle_004" parent="." index="52"]
+material_override = SubResource("StandardMaterial3D_wmhtn")
+
+[node name="WineBottle_005" parent="." index="53"]
+material_override = SubResource("StandardMaterial3D_wmhtn")
+
+[node name="WineBottle_006" parent="." index="54"]
+material_override = SubResource("StandardMaterial3D_wmhtn")
+
+[node name="WineBottle_007" parent="." index="55"]
+material_override = SubResource("StandardMaterial3D_wmhtn")
+
+[node name="WineBottle_008" parent="." index="56"]
+material_override = SubResource("StandardMaterial3D_wmhtn")
+
+[node name="WineBottle_009" parent="." index="57"]
+material_override = SubResource("StandardMaterial3D_wmhtn")
+
+[node name="WineBottle_010" parent="." index="58"]
+material_override = SubResource("StandardMaterial3D_wmhtn")
+
+[node name="WineBottle_011" parent="." index="59"]
+material_override = SubResource("StandardMaterial3D_wmhtn")
+
+[node name="WineBottle_012" parent="." index="60"]
+material_override = SubResource("StandardMaterial3D_wmhtn")
+
+[node name="WineBottle_013" parent="." index="61"]
+material_override = SubResource("StandardMaterial3D_wmhtn")
+
+[node name="WineBottle_014" parent="." index="62"]
+material_override = SubResource("StandardMaterial3D_wmhtn")
+
+[node name="WineBottle_015" parent="." index="63"]
+material_override = SubResource("StandardMaterial3D_wmhtn")
+
+[node name="WineBottle_016" parent="." index="64"]
+material_override = SubResource("StandardMaterial3D_wmhtn")
+
+[node name="WineBottle_017" parent="." index="65"]
+material_override = SubResource("StandardMaterial3D_wmhtn")
+
+[node name="WineBottle_018" parent="." index="66"]
+material_override = SubResource("StandardMaterial3D_wmhtn")
+
+[node name="WineBottle_019" parent="." index="67"]
+material_override = SubResource("StandardMaterial3D_wmhtn")
+
+[node name="WineBottle_020" parent="." index="68"]
+material_override = SubResource("StandardMaterial3D_wmhtn")
+
+[node name="WineBottle_021" parent="." index="69"]
+material_override = SubResource("StandardMaterial3D_wmhtn")
+
+[node name="WineBottle_022" parent="." index="70"]
+material_override = SubResource("StandardMaterial3D_wmhtn")
+
+[node name="WineBottle_023" parent="." index="71"]
+material_override = SubResource("StandardMaterial3D_wmhtn")
+
+[node name="WineBottle_024" parent="." index="72"]
+material_override = SubResource("StandardMaterial3D_wmhtn")
+
+[node name="WineBottle_025" parent="." index="73"]
+material_override = SubResource("StandardMaterial3D_wmhtn")
+
+[node name="Cylinder002" parent="." index="74"]
+material_override = SubResource("StandardMaterial3D_myd0j")
+
+[node name="Tankard" parent="." index="75"]
+material_override = SubResource("StandardMaterial3D_myd0j")
+
+[node name="Tankard001" parent="." index="76"]
+material_override = SubResource("StandardMaterial3D_myd0j")
+
+[node name="Tankard002" parent="." index="77"]
+material_override = SubResource("StandardMaterial3D_myd0j")
+
+[node name="Tankard003" parent="." index="78"]
+material_override = SubResource("StandardMaterial3D_myd0j")
+
+[node name="Tankard004" parent="." index="79"]
+material_override = SubResource("StandardMaterial3D_myd0j")
+
+[node name="Tankard005" parent="." index="80"]
+material_override = SubResource("StandardMaterial3D_myd0j")
+
+[node name="Tankard006" parent="." index="81"]
+material_override = SubResource("StandardMaterial3D_myd0j")
+
+[node name="WineBottle_026" parent="." index="82"]
+material_override = SubResource("StandardMaterial3D_fdjby")
+
+[node name="Tankard007" parent="." index="83"]
+material_override = SubResource("StandardMaterial3D_njxhs")
+
+[node name="Cylinder003" parent="." index="84"]
+material_override = SubResource("StandardMaterial3D_fxixx")
+
+[node name="Cylinder004" parent="." index="85"]
+material_override = SubResource("StandardMaterial3D_fxixx")
+
+[node name="WineBottle_027" parent="." index="86"]
+material_override = SubResource("StandardMaterial3D_xiw4l")
+
+[node name="WineBottle_028" parent="." index="87"]
+material_override = SubResource("StandardMaterial3D_xiw4l")
+
+[node name="Tankard008" parent="." index="88"]
+material_override = SubResource("StandardMaterial3D_ynwuc")
+
+[node name="Tankard009" parent="." index="89"]
+material_override = SubResource("StandardMaterial3D_ynwuc")
+
+[node name="Tankard010" parent="." index="90"]
+material_override = SubResource("StandardMaterial3D_ynwuc")
+
+[node name="Tankard011" parent="." index="91"]
+material_override = SubResource("StandardMaterial3D_ynwuc")
+
+[node name="WineBottle_029" parent="." index="92"]
+material_override = SubResource("StandardMaterial3D_31bp4")
+
+[node name="Plate036" parent="." index="93"]
+material_override = SubResource("StandardMaterial3D_nt2ag")
+
+[node name="Plate037" parent="." index="94"]
+material_override = SubResource("StandardMaterial3D_nt2ag")
+
+[node name="WineBottle_030" parent="." index="95"]
+material_override = SubResource("StandardMaterial3D_liu4y")
+
+[node name="Tankard012" parent="." index="96"]
+material_override = SubResource("StandardMaterial3D_dlmlo")
+
+[node name="WineBottle_031" parent="." index="97"]
+material_override = SubResource("StandardMaterial3D_h2e3y")
+
+[node name="Tankard013" parent="." index="98"]
+material_override = SubResource("StandardMaterial3D_6fu6p")
+
+[node name="Tankard014" parent="." index="99"]
+material_override = SubResource("StandardMaterial3D_6fu6p")
+
+[node name="WineBottle_032" parent="." index="100"]
+material_override = SubResource("StandardMaterial3D_88ann")
+
+[node name="Tankard015" parent="." index="101"]
+material_override = SubResource("StandardMaterial3D_0ua0k")
+
+[node name="Tankard016" parent="." index="102"]
+material_override = SubResource("StandardMaterial3D_0ua0k")
+
+[node name="Tankard017" parent="." index="103"]
+material_override = SubResource("StandardMaterial3D_0ua0k")
+
+[node name="Tankard018" parent="." index="104"]
+material_override = SubResource("StandardMaterial3D_0ua0k")
+
+[node name="Tankard019" parent="." index="105"]
+material_override = SubResource("StandardMaterial3D_0ua0k")
+
+[node name="Tankard020" parent="." index="106"]
+material_override = SubResource("StandardMaterial3D_0ua0k")
+
+[node name="Tankard021" parent="." index="107"]
+material_override = SubResource("StandardMaterial3D_0ua0k")
+
+[node name="Board_Game001" parent="." index="108"]
+material_override = SubResource("StandardMaterial3D_jglqq")
+
+[node name="barrel 004" parent="." index="109"]
+material_override = SubResource("StandardMaterial3D_ep1jy")
+
+[node name="barrel 005" parent="." index="110"]
+material_override = SubResource("StandardMaterial3D_ep1jy")
+
+[node name="barrel 006" parent="." index="111"]
+material_override = SubResource("StandardMaterial3D_ep1jy")
+
+[node name="barrel 007" parent="." index="112"]
+material_override = SubResource("StandardMaterial3D_ep1jy")
+
+[node name="barrel 008" parent="." index="113"]
+material_override = SubResource("StandardMaterial3D_ep1jy")
+
+[node name="barrel 009" parent="." index="114"]
+material_override = SubResource("StandardMaterial3D_ep1jy")
+
+[node name="barrel 010" parent="." index="115"]
+material_override = SubResource("StandardMaterial3D_ep1jy")
+
+[node name="barrel 011" parent="." index="116"]
+material_override = SubResource("StandardMaterial3D_ep1jy")
+
+[node name="Floor" parent="." index="117"]
+material_override = SubResource("StandardMaterial3D_ga5b3")
+
+[node name="Stool_016" parent="." index="118"]
+material_override = SubResource("StandardMaterial3D_0okv3")
+
+[node name="Shelf_Backboard001" parent="." index="119"]
+material_override = SubResource("StandardMaterial3D_0okv3")
+
+[node name="Shelf_Backboard002" parent="." index="120"]
+material_override = SubResource("StandardMaterial3D_0okv3")
+
+[node name="Plate038" parent="." index="121"]
+material_override = SubResource("StandardMaterial3D_l8m2f")
+
+[node name="Plate039" parent="." index="122"]
+material_override = SubResource("StandardMaterial3D_l8m2f")
+
+[node name="Plate040" parent="." index="123"]
+material_override = SubResource("StandardMaterial3D_l8m2f")
+
+[node name="Plate041" parent="." index="124"]
+material_override = SubResource("StandardMaterial3D_l8m2f")
+
+[node name="Plate042" parent="." index="125"]
+material_override = SubResource("StandardMaterial3D_l8m2f")
+
+[node name="Plate043" parent="." index="126"]
+material_override = SubResource("StandardMaterial3D_l8m2f")
+
+[node name="Plate044" parent="." index="127"]
+material_override = SubResource("StandardMaterial3D_l8m2f")
+
+[node name="Plate045" parent="." index="128"]
+material_override = SubResource("StandardMaterial3D_l8m2f")
+
+[node name="Tankard022" parent="." index="129"]
+material_override = SubResource("StandardMaterial3D_sikcw")
+
+[node name="Tankard023" parent="." index="130"]
+material_override = SubResource("StandardMaterial3D_sikcw")
+
+[node name="Tankard024" parent="." index="131"]
+material_override = SubResource("StandardMaterial3D_sikcw")
+
+[node name="Plate046" parent="." index="132"]
+material_override = SubResource("StandardMaterial3D_l0kw0")
+
+[node name="Plate047" parent="." index="133"]
+material_override = SubResource("StandardMaterial3D_l0kw0")
+
+[node name="WineBottle_033" parent="." index="134"]
+material_override = SubResource("StandardMaterial3D_n14vi")
+
+[node name="Tankard025" parent="." index="135"]
+material_override = SubResource("StandardMaterial3D_ry770")
+
+[node name="Tankard026" parent="." index="136"]
+material_override = SubResource("StandardMaterial3D_m2ets")
+
+[node name="Tankard027" parent="." index="137"]
+material_override = SubResource("StandardMaterial3D_j4dka")
+
+[node name="WineBottle_034" parent="." index="138"]
+material_override = SubResource("StandardMaterial3D_wnhu6")
+
+[node name="WineBottle_035" parent="." index="139"]
+material_override = SubResource("StandardMaterial3D_wnhu6")
+
+[node name="Tankard028" parent="." index="140"]
+material_override = SubResource("StandardMaterial3D_qmxga")
+
+[node name="Tankard029" parent="." index="141"]
+material_override = SubResource("StandardMaterial3D_qmxga")
+
+[node name="Tankard030" parent="." index="142"]
+material_override = SubResource("StandardMaterial3D_qmxga")
+
+[node name="WineBottle_036" parent="." index="143"]
+material_override = SubResource("StandardMaterial3D_7etig")
+
+[node name="WineBottle_037" parent="." index="144"]
+material_override = SubResource("StandardMaterial3D_7etig")
+
+[node name="WineBottle_038" parent="." index="145"]
+material_override = SubResource("StandardMaterial3D_7etig")
+
+[node name="Plate048" parent="." index="146"]
+material_override = SubResource("StandardMaterial3D_h5gsf")
+
+[node name="Plate049" parent="." index="147"]
+material_override = SubResource("StandardMaterial3D_h5gsf")
+
+[node name="Plate050" parent="." index="148"]
+material_override = SubResource("StandardMaterial3D_h5gsf")
+
+[node name="Plate051" parent="." index="149"]
+material_override = SubResource("StandardMaterial3D_h5gsf")
+
+[node name="Plate052" parent="." index="150"]
+material_override = SubResource("StandardMaterial3D_h5gsf")
+
+[node name="Plate053" parent="." index="151"]
+material_override = SubResource("StandardMaterial3D_h5gsf")
+
+[node name="Tankard031" parent="." index="152"]
+material_override = SubResource("StandardMaterial3D_7pufn")
+
+[node name="Tankard032" parent="." index="153"]
+material_override = SubResource("StandardMaterial3D_7pufn")
+
+[node name="WineBottle_039" parent="." index="154"]
+material_override = SubResource("StandardMaterial3D_c8sb8")
+
+[node name="Plate054" parent="." index="155"]
+material_override = SubResource("StandardMaterial3D_g2n45")
+
+[node name="Plate055" parent="." index="156"]
+material_override = SubResource("StandardMaterial3D_g2n45")
+
+[node name="Shield" parent="." index="157"]
+material_override = SubResource("StandardMaterial3D_fkkmj")
+
+[node name="Shield_2" parent="." index="158"]
+material_override = SubResource("StandardMaterial3D_fkkmj")
+
+[node name="Wooden Beams" parent="." index="159"]
+material_override = SubResource("StandardMaterial3D_gxna5")
+
+[node name="Roof" parent="." index="160"]
+material_override = SubResource("StandardMaterial3D_8ybhf")
+
+[node name="Stool_017" parent="." index="161"]
+material_override = SubResource("StandardMaterial3D_p1lfw")
+
+[node name="Stool_018" parent="." index="162"]
+material_override = SubResource("StandardMaterial3D_p1lfw")

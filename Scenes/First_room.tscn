@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://bddroqhpvhfxl"]
+[gd_scene load_steps=27 format=3 uid="uid://bddroqhpvhfxl"]
 
 [ext_resource type="Texture2D" uid="uid://ygs2lx25hasn" path="res://Room parts/steven-c-skydome-render.jpg" id="1_fif3h"]
 [ext_resource type="PackedScene" uid="uid://ctjx0tjkd2gw7" path="res://Scenes/Player.tscn" id="2_fnn4v"]
@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://be8b0whtt46ye" path="res://Scenes/Speech.tscn" id="14_7ntww"]
 [ext_resource type="PackedScene" uid="uid://s7wbd7mj34o8" path="res://building_Shed_1.tscn" id="17_k26w4"]
 [ext_resource type="PackedScene" uid="uid://xq0i36jxr4qd" path="res://Lamp.fbx" id="17_qhl2l"]
+[ext_resource type="PackedScene" uid="uid://dol6g770whd5d" path="res://Buildings/merchants_market_tavern.tscn" id="18_kklwb"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_6jx5a"]
 panorama = ExtResource("1_fif3h")
@@ -48,7 +49,7 @@ albedo_texture = ExtResource("1_fif3h")
 environment = SubResource("Environment_4gv2q")
 
 [node name="Node3d" parent="." instance=ExtResource("2_fnn4v")]
-transform = Transform3D(-49.992, 0, 1.02829, 0, 51.913, 0, -0.897051, 0, -57.3058, 2.69542, 1.0544, -4.2195)
+transform = Transform3D(-49.992, 0, 1.02829, 0, 51.913, 0, -0.897051, 0, -57.3058, 2.69542, 1.09964, -3.94215)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -0.0139447, -0.999903, 0, 0.999903, -0.0139447, 0, 2.94731, -7.49428)
@@ -202,6 +203,9 @@ collision_layer = 2
 transform = Transform3D(0.28, 0, 0, 0, 0.28, 0, 0, 0, 0.28, -7.2154, -6.1121, 38.1522)
 
 [node name="building" parent="." instance=ExtResource("17_k26w4")]
-transform = Transform3D(-0.0281658, 0, 0.999603, 0, 1, 0, -0.999603, 0, -0.0281658, -28.483, -5.99077, 38.9809)
+transform = Transform3D(-0.0281658, 0, 0.999603, 0, 1, 0, -0.999603, 0, -0.0281658, -19.7986, -5.99077, 37.7925)
+
+[node name="Merchants_Market_Tavern" parent="." instance=ExtResource("18_kklwb")]
+transform = Transform3D(-0.888849, 0, 0.4582, 0, 1, 0, -0.4582, 0, -0.888849, -11.0519, -5.92044, 50.4025)
 
 [editable path="Readable_note"]
