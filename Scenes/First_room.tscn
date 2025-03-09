@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://bddroqhpvhfxl"]
+[gd_scene load_steps=26 format=3 uid="uid://bddroqhpvhfxl"]
 
 [ext_resource type="Texture2D" uid="uid://ygs2lx25hasn" path="res://Room parts/steven-c-skydome-render.jpg" id="1_fif3h"]
 [ext_resource type="PackedScene" uid="uid://ctjx0tjkd2gw7" path="res://Scenes/Player.tscn" id="2_fnn4v"]
@@ -6,19 +6,17 @@
 [ext_resource type="Material" uid="uid://2l86n5jpn7ff" path="res://Textures/Ceiling/walls.tres" id="4_5yoel"]
 [ext_resource type="Material" uid="uid://fuji13abgsr" path="res://Textures/Ceiling/Wooden floor.tres" id="5_d56fa"]
 [ext_resource type="PackedScene" uid="uid://uh8fs5c7hcqn" path="res://Room parts/victorian_bed.tscn" id="6_4p17t"]
-[ext_resource type="PackedScene" uid="uid://dhrrdejd4qdx2" path="res://Scenes/bedlamp.tscn" id="7_cygen"]
+[ext_resource type="PackedScene" uid="uid://dhrrdejd4qdx2" path="res://Room parts/bedlamp.tscn" id="7_cygen"]
 [ext_resource type="PackedScene" uid="uid://j3eib418ryvf" path="res://Room parts/tab;e.tscn" id="8_r3uuf"]
 [ext_resource type="PackedScene" uid="uid://ohd12ntav3t" path="res://Room parts/Sofa.tscn" id="9_5c6kt"]
 [ext_resource type="PackedScene" uid="uid://dqbxu6nwqifm1" path="res://Room parts/table_round_obj.tscn" id="10_1n6i0"]
 [ext_resource type="PackedScene" uid="uid://7q2eb5c55x86" path="res://Scenes/Gun Pickup.tscn" id="11_wfn6d"]
 [ext_resource type="PackedScene" uid="uid://b3wqpd6prosgf" path="res://Scenes/single_page.fbx" id="12_6e7i5"]
 [ext_resource type="PackedScene" uid="uid://7aogr6gpi2ik" path="res://Interaction_object.tscn" id="13_kc374"]
-[ext_resource type="PackedScene" uid="uid://ntv54ebfwy3h" path="res://Scenes/Pause_menu.tscn" id="14_1bnym"]
+[ext_resource type="PackedScene" uid="uid://ntv54ebfwy3h" path="res://Scenes/Menus/Pause_menu.tscn" id="14_1bnym"]
 [ext_resource type="PackedScene" uid="uid://be8b0whtt46ye" path="res://Scenes/Speech.tscn" id="14_7ntww"]
-[ext_resource type="PackedScene" uid="uid://csdpjhb510ffu" path="res://Scenes/building3.fbx" id="15_fa0u1"]
-[ext_resource type="PackedScene" uid="uid://56vk2slb5lqb" path="res://AssembledExportForJon.fbx" id="16_gippd"]
+[ext_resource type="PackedScene" uid="uid://s7wbd7mj34o8" path="res://building_Shed_1.tscn" id="17_k26w4"]
 [ext_resource type="PackedScene" uid="uid://xq0i36jxr4qd" path="res://Lamp.fbx" id="17_qhl2l"]
-[ext_resource type="PackedScene" uid="uid://dpk00w6ov3sjv" path="res://Merchants_Market_Tavern.fbx" id="18_u4jq5"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_6jx5a"]
 panorama = ExtResource("1_fif3h")
@@ -200,16 +198,10 @@ collision_layer = 2
 
 [node name="Pause_menu" parent="." instance=ExtResource("14_1bnym")]
 
-[node name="building3" parent="." instance=ExtResource("15_fa0u1")]
-transform = Transform3D(7.68697, 0, -2.21597, 0, 8, 0, 2.21597, 0, 7.68697, -15.8671, -2.71869, 74.3603)
-
-[node name="AssembledExportForJon" parent="." instance=ExtResource("16_gippd")]
-transform = Transform3D(0.927079, 0, 0.374866, 0, 1, 0, -0.374866, 0, 0.927079, 2.62959, -5.99093, 58.6057)
-
 [node name="Lamp" parent="." instance=ExtResource("17_qhl2l")]
 transform = Transform3D(0.28, 0, 0, 0, 0.28, 0, 0, 0, 0.28, -7.2154, -6.1121, 38.1522)
 
-[node name="Merchants_Market_Tavern" parent="." instance=ExtResource("18_u4jq5")]
-transform = Transform3D(-0.99103, 0, -0.13364, 0, 1, 0, 0.13364, 0, -0.99103, 2.70807, -5.91485, 46.5397)
+[node name="building" parent="." instance=ExtResource("17_k26w4")]
+transform = Transform3D(-0.0281658, 0, 0.999603, 0, 1, 0, -0.999603, 0, -0.0281658, -28.483, -5.99077, 38.9809)
 
 [editable path="Readable_note"]

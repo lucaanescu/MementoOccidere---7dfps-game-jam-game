@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://ddxd0k1tojlhd"]
+
+[ext_resource type="PackedScene" uid="uid://56vk2slb5lqb" path="res://AssembledExportForJon.fbx" id="1_kbtkh"]
+
+[node name="AssembledExportForJon" instance=ExtResource("1_kbtkh")]
+
+[node name="transform4" parent="group/pasted__pCube132" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.79178, 0)
+
+[node name="group3_pasted__pCube12" parent="." index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.562459, 0)
+
+[node name="pasted__pCube13" parent="." index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0111028, 0.461177, 0)
+
+[node name="pCube1" parent="." index="7"]
+transform = Transform3D(1, 0, 0, 0, 0.733494, 0, 0, 0, 1, 2.35454, 2.10171, 0.000799036)
+
+[node name="pCube5" parent="." index="13"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.57444, 0)

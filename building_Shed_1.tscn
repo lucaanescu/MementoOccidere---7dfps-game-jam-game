@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://s7wbd7mj34o8"]
+
+[ext_resource type="PackedScene" uid="uid://dovihyljuaf7o" path="res://building.fbx" id="1_ri41m"]
+[ext_resource type="Texture2D" uid="uid://p7jvrfpetia8" path="res://Textures/building_1__pbr_diffuse.png" id="3_b2ihf"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u4pwk"]
+albedo_texture = ExtResource("3_b2ihf")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dfblw"]
+albedo_texture = ExtResource("3_b2ihf")
+
+[node name="building" instance=ExtResource("1_ri41m")]
+
+[node name="building_1" parent="." index="0"]
+material_override = SubResource("StandardMaterial3D_u4pwk")
+material_overlay = SubResource("StandardMaterial3D_dfblw")
+
+[node name="Sun" parent="." index="1"]
+visible = false

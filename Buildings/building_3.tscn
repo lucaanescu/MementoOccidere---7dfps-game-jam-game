@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dpe1mf8cew1c5"]
+
+[ext_resource type="PackedScene" uid="uid://csdpjhb510ffu" path="res://Scenes/building3.fbx" id="1_jgudg"]
+
+[node name="building3" instance=ExtResource("1_jgudg")]
+
+[node name="Camera" parent="." index="0"]
+visible = false
