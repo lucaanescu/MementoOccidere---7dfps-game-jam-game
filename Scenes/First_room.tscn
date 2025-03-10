@@ -81,7 +81,22 @@ material_override = SubResource("StandardMaterial3D_u8me6")
 mesh = SubResource("CylinderMesh_j4nv8")
 
 [node name="CSGMesh3D4" type="CSGMesh3D" parent="."]
-transform = Transform3D(7.80238, 0, 0, 0, 0.0687321, 0.0851587, 0, -0.000199135, 29.3929, -6.027, -5.809, 60.8733)
+transform = Transform3D(7.80238, 0, 0, 0, 0.0687321, 0.0851587, 0, -0.000199135, 29.3929, -6.027, -5.791, 60.873)
+mesh = SubResource("BoxMesh_s61ds")
+material = SubResource("StandardMaterial3D_5wdgy")
+
+[node name="CSGMesh3D7" type="CSGMesh3D" parent="."]
+transform = Transform3D(7.80238, 0, 0, 0, 0.0687321, 0.0851587, 0, -0.000199135, 29.3929, -6.027, -5.927, 11.441)
+mesh = SubResource("BoxMesh_s61ds")
+material = SubResource("StandardMaterial3D_5wdgy")
+
+[node name="CSGMesh3D5" type="CSGMesh3D" parent="."]
+transform = Transform3D(3.16033, 0.000137836, -13.953, -1.32941e-09, 0.0687892, 0.0584518, 3.0261, -0.00014395, 14.5719, -19.832, -5.82, 46.686)
+mesh = SubResource("BoxMesh_s61ds")
+material = SubResource("StandardMaterial3D_5wdgy")
+
+[node name="CSGMesh3D6" type="CSGMesh3D" parent="."]
+transform = Transform3D(3.4015, -0.000125361, 12.6902, -1.32941e-09, 0.0687892, 0.0584518, -2.75222, -0.000154935, 15.6839, 7.962, -5.823, 46.686)
 mesh = SubResource("BoxMesh_s61ds")
 material = SubResource("StandardMaterial3D_5wdgy")
 
@@ -231,6 +246,12 @@ collision_layer = 2
 
 [node name="Lamp" parent="." instance=ExtResource("17_qhl2l")]
 transform = Transform3D(0.28, 0, 0, 0, 0.28, 0, 0, 0, 0.28, -5.96645, -5.97775, 36.022)
+
+[node name="Lamp3" parent="." instance=ExtResource("17_qhl2l")]
+transform = Transform3D(0.28, 0, 0, 0, 0.28, 0, 0, 0, 0.28, -9.3688, -5.97775, 47.5971)
+
+[node name="Lamp2" parent="." instance=ExtResource("17_qhl2l")]
+transform = Transform3D(0.190749, 0, -0.204976, 0, 0.28, 0, 0.204976, 0, 0.190749, -16.9233, -5.967, 41.3095)
 
 [node name="building" parent="." instance=ExtResource("17_k26w4")]
 transform = Transform3D(-0.0281658, 0, 0.999603, 0, 1, 0, -0.999603, 0, -0.0281658, -19.7986, -5.99077, 37.7925)
