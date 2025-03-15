@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://ddxd0k1tojlhd"]
 
-[ext_resource type="PackedScene" uid="uid://56vk2slb5lqb" path="res://AssembledExportForJon.fbx" id="1_kbtkh"]
+[ext_resource type="PackedScene" uid="uid://56vk2slb5lqb" path="res://Textures/Just_Building_3/AssembledExportForJon.fbx" id="1_kbtkh"]
 
 [node name="AssembledExportForJon" instance=ExtResource("1_kbtkh")]
 

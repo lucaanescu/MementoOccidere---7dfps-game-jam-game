@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3 uid="uid://dhfq1des6vie6"]
+
+[ext_resource type="PackedScene" uid="uid://dwktwfqba7mfs" path="res://Textures/Just_building_2/Tent's.fbx" id="1_vkk75"]
+[ext_resource type="Texture2D" uid="uid://boanll5kk8i7b" path="res://Textures/Market_stall_2/Medieval_Market_Crates_BaseColor_With_AO.png" id="2_ruihu"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5osyw"]
+albedo_texture = ExtResource("2_ruihu")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w2uhi"]
+albedo_texture = ExtResource("2_ruihu")
+
+[node name="Tent\'s" instance=ExtResource("1_vkk75")]
+
+[node name="HighPoly_001" parent="." index="1"]
+material_override = SubResource("StandardMaterial3D_5osyw")
+
+[node name="Plane" parent="." index="2"]
+material_override = SubResource("StandardMaterial3D_w2uhi")

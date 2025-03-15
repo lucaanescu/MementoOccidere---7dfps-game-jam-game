@@ -7,7 +7,7 @@
 size = Vector3(11.0055, 2.61712, 1.30079)
 
 [node name="Node3D" type="Node3D"]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
+transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0, 0, 0)
 script = ExtResource("1_bbm8b")
 
 [node name="Gun_body" type="StaticBody3D" parent="."]
@@ -20,3 +20,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.107048, 4.56627, -0.0627937
 shape = SubResource("BoxShape3D_hgon5")
 
 [node name="rifle2" parent="Gun_body" instance=ExtResource("1_2yhsy")]
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(-1.62842, 0, 4.72739, 0, 5, 0, -4.72739, 0, -1.62842, 20.516, 0, -7.92989)
+light_energy = 1.98
+light_indirect_energy = 0.837
+light_volumetric_fog_energy = 4.429
+light_size = 0.092
+spot_range = 7.47047
+spot_angle = 10.9532

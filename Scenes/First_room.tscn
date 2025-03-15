@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://bddroqhpvhfxl"]
+[gd_scene load_steps=37 format=3 uid="uid://bddroqhpvhfxl"]
 
 [ext_resource type="Texture2D" uid="uid://ygs2lx25hasn" path="res://Room parts/steven-c-skydome-render.jpg" id="1_fif3h"]
 [ext_resource type="PackedScene" uid="uid://ctjx0tjkd2gw7" path="res://Scenes/Player.tscn" id="2_fnn4v"]
@@ -18,8 +18,11 @@
 [ext_resource type="PackedScene" uid="uid://ntv54ebfwy3h" path="res://Scenes/Menus/Pause_menu.tscn" id="14_1bnym"]
 [ext_resource type="PackedScene" uid="uid://be8b0whtt46ye" path="res://Scenes/Speech.tscn" id="14_7ntww"]
 [ext_resource type="PackedScene" uid="uid://s7wbd7mj34o8" path="res://building_Shed_1.tscn" id="17_k26w4"]
-[ext_resource type="PackedScene" uid="uid://xq0i36jxr4qd" path="res://Lamp.fbx" id="17_qhl2l"]
 [ext_resource type="PackedScene" uid="uid://dol6g770whd5d" path="res://Buildings/merchants_market_tavern.tscn" id="18_kklwb"]
+[ext_resource type="PackedScene" uid="uid://i2mu05y6c4b1" path="res://Textures/Just_Building_3/Building_3.tscn" id="21_snr1p"]
+[ext_resource type="PackedScene" uid="uid://jg108ntoaitq" path="res://Tent_prop_2-2.fbx" id="22_5exkf"]
+[ext_resource type="PackedScene" uid="uid://dw28djx87p5fq" path="res://Buildings/lamp.tscn" id="22_nxfjv"]
+[ext_resource type="PackedScene" uid="uid://cmlbtpypna4n8" path="res://Buildings/lamp_broken.tscn" id="23_20m4r"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_6jx5a"]
 panorama = ExtResource("1_fif3h")
@@ -85,6 +88,11 @@ transform = Transform3D(7.80238, 0, 0, 0, 0.0687321, 0.0851587, 0, -0.000199135,
 mesh = SubResource("BoxMesh_s61ds")
 material = SubResource("StandardMaterial3D_5wdgy")
 
+[node name="CSGMesh3D10" type="CSGMesh3D" parent="."]
+transform = Transform3D(-3.41053e-07, 0, -29.393, 0, 0.0687324, 0, 7.80238, 0, -1.28481e-06, 16.8955, -5.87497, 35.801)
+mesh = SubResource("BoxMesh_s61ds")
+material = SubResource("StandardMaterial3D_5wdgy")
+
 [node name="CSGMesh3D7" type="CSGMesh3D" parent="."]
 transform = Transform3D(7.80238, 0, 0, 0, 0.0687321, 0.0851587, 0, -0.000199135, 29.3929, -6.027, -5.927, 11.441)
 mesh = SubResource("BoxMesh_s61ds")
@@ -96,7 +104,7 @@ mesh = SubResource("BoxMesh_s61ds")
 material = SubResource("StandardMaterial3D_5wdgy")
 
 [node name="CSGMesh3D6" type="CSGMesh3D" parent="."]
-transform = Transform3D(3.4015, -0.000125361, 12.6902, -1.32941e-09, 0.0687892, 0.0584518, -2.75222, -0.000154935, 15.6839, 7.962, -5.823, 46.686)
+transform = Transform3D(9.07142, 8.45997e-05, 13.8109, -0.0223907, 0.0685498, 0, -9.07142, -8.45997e-05, 13.8109, 6.02438, -5.88993, 48.2194)
 mesh = SubResource("BoxMesh_s61ds")
 material = SubResource("StandardMaterial3D_5wdgy")
 
@@ -196,6 +204,7 @@ transform = Transform3D(1.75, 0, 0, 0, 1.75, 0, 0, 0, 1.75, -1.86536, 1.03157, 1
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Bedlamp"]
 transform = Transform3D(0.571429, 0, 0, 0, 0.571429, 0, 0, 0, 0.571429, 0.00414515, 0.353055, 0)
+light_color = Color(0.862483, 0.817967, 0.698527, 1)
 light_energy = 4.265
 light_indirect_energy = 5.082
 light_volumetric_fog_energy = 3.449
@@ -216,14 +225,12 @@ transform = Transform3D(1.75, 0, 0, 0, 1.75, 0, 0, 0, 1.75, 4.32092, 0.983071, 1
 
 [node name="OmniLight3D2" type="OmniLight3D" parent="Bedlamp2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00985098, 0.380797, -0.00650132)
+light_color = Color(0.862745, 0.819608, 0.698039, 1)
 light_energy = 4.265
 light_indirect_energy = 5.082
 light_volumetric_fog_energy = 3.449
 light_size = 0.071
 omni_range = 5.59839
-
-[node name="Gun Pickup" parent="." instance=ExtResource("11_wfn6d")]
-transform = Transform3D(0.00167811, -0.149991, -1.06167e-10, 0.139957, 0.00156585, -0.0539409, 0.0539375, 0.000603458, 0.139966, 1.06625, 0.685704, 6.83331)
 
 [node name="single_page" parent="." instance=ExtResource("12_6e7i5")]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 3.77153, 1.04163, 1.08291)
@@ -231,6 +238,7 @@ transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 3.77153, 1.04163, 1.082
 [node name="Ground1" type="CSGMesh3D" parent="."]
 transform = Transform3D(40.705, 0, 0, 0, 10.101, 0, 0, 0, 39.283, -0.0381103, -5.91328, 39.1231)
 material_override = SubResource("StandardMaterial3D_6utly")
+use_collision = true
 mesh = SubResource("PlaneMesh_mej1r")
 
 [node name="Readable_note" parent="." instance=ExtResource("13_kc374")]
@@ -244,19 +252,49 @@ collision_layer = 2
 
 [node name="Pause_menu" parent="." instance=ExtResource("14_1bnym")]
 
-[node name="Lamp" parent="." instance=ExtResource("17_qhl2l")]
-transform = Transform3D(0.28, 0, 0, 0, 0.28, 0, 0, 0, 0.28, -5.96645, -5.97775, 36.022)
-
-[node name="Lamp3" parent="." instance=ExtResource("17_qhl2l")]
-transform = Transform3D(0.28, 0, 0, 0, 0.28, 0, 0, 0, 0.28, -9.3688, -5.97775, 47.5971)
-
-[node name="Lamp2" parent="." instance=ExtResource("17_qhl2l")]
-transform = Transform3D(0.190749, 0, -0.204976, 0, 0.28, 0, 0.204976, 0, 0.190749, -16.9233, -5.967, 41.3095)
-
 [node name="building" parent="." instance=ExtResource("17_k26w4")]
 transform = Transform3D(-0.0281658, 0, 0.999603, 0, 1, 0, -0.999603, 0, -0.0281658, -19.7986, -5.99077, 37.7925)
 
 [node name="Merchants_Market_Tavern" parent="." instance=ExtResource("18_kklwb")]
 transform = Transform3D(-0.888849, 0, 0.4582, 0, 1, 0, -0.4582, 0, -0.888849, -13.9843, -5.92044, 48.546)
+
+[node name="Node3D" parent="." instance=ExtResource("21_snr1p")]
+transform = Transform3D(-0.743094, 0, -0.942237, 0, 1.2, 0, 0.942237, 0, -0.743094, 8.78539, -1.55994, 63.5291)
+
+[node name="Lamp" parent="." instance=ExtResource("22_nxfjv")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -9.04962, -6.03363, 48.1959)
+
+[node name="Lamp5" parent="." instance=ExtResource("22_nxfjv")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -3.03729, -6.03386, 48.1937)
+
+[node name="Lamp9" parent="." instance=ExtResource("22_nxfjv")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -3.03729, -6.13112, 14.5815)
+
+[node name="Lamp2" parent="." instance=ExtResource("22_nxfjv")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -5.89783, -6.07235, 36.0162)
+
+[node name="Lamp4" parent="." instance=ExtResource("23_20m4r")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 7.04963, -6.07559, 38.5437)
+
+[node name="Lamp10" parent="." instance=ExtResource("23_20m4r")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -9.05228, -6.11157, 14.5873)
+
+[node name="Lamp8" parent="." instance=ExtResource("23_20m4r")]
+transform = Transform3D(0.327146, 0, 0.378121, 0, 0.5, 0, -0.378121, 0, 0.327146, -16.6116, -6.0666, 41.5258)
+
+[node name="Lamp3" parent="." instance=ExtResource("23_20m4r")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -9.05167, -5.94337, 72.8058)
+
+[node name="Lamp11" parent="." instance=ExtResource("23_20m4r")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -2.9984, -5.94337, 72.8051)
+
+[node name="Tent_prop_2-2" parent="." instance=ExtResource("22_5exkf")]
+transform = Transform3D(0.927053, 0, 0.37493, 0, 1, 0, -0.37493, 0, 0.927053, 7.9262, -5.91328, 26.7473)
+
+[node name="Tent_prop_2-3" parent="." instance=ExtResource("22_5exkf")]
+transform = Transform3D(-0.878334, 0, 0.478048, 0, 1, 0, -0.478048, 0, -0.878334, -15.6694, -5.91328, 55.3903)
+
+[node name="Node3D2" parent="." instance=ExtResource("11_wfn6d")]
+transform = Transform3D(-6.55671e-09, -0.15, 0, 0.144889, -6.33329e-09, -0.0388229, 0.0388229, -1.697e-09, 0.144889, 0.883708, 0.683813, 6.93319)
 
 [editable path="Readable_note"]

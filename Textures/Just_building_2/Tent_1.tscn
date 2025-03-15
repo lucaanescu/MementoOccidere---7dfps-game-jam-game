@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://5kiv3s4qyapn"]
+
+[ext_resource type="PackedScene" uid="uid://dwktwfqba7mfs" path="res://Textures/Just_building_2/Tent's.fbx" id="1_evo0s"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Tent\'s" parent="." instance=ExtResource("1_evo0s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.11064, 0, -0.0306385)
